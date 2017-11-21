@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by germay on 21/11/2017.
+ * Created by germa on 21/11/2017.
  */
 
-public class ClassMenuPrincipal extends AppCompatActivity {
+public class ClassMenuRuta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interface_menuprincipal);
+        setContentView(R.layout.interface_menuruta);
     }
 }

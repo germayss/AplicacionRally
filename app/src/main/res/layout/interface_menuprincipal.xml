@@ -10,31 +10,36 @@
     <Button
         android:id="@+id/buttonRuta"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Ruta" />
 
     <Button
         android:id="@+id/buttonPrueba"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Pruebas" />
 
     <Button
         android:id="@+id/buttonEquipo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Equipos" />
 
     <Button
         android:id="@+id/buttonJuez"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Jueces" />
 
     <Button
         android:id="@+id/buttonAdmintrador"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Administradores" />
 
 </LinearLayout>
