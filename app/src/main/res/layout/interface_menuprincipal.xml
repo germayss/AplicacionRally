@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    android:paddingVertical="@dimen/activity_horizontal_margin">
+
+    <Button
+        android:id="@+id/buttonRuta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ruta" />
+
+    <Button
+        android:id="@+id/buttonPrueba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pruebas" />
+
+    <Button
+        android:id="@+id/buttonEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Equipos" />
+
+    <Button
+        android:id="@+id/buttonJuez"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jueces" />
+
+    <Button
+        android:id="@+id/buttonAdmintrador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Administradores" />
+
+</LinearLayout>
