@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnConfirmallegada2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Confirmar llegada" />
+
+    <Button
+        android:id="@+id/btnAsignarPrueba"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Asignar Prueba" />
+
+    <Button
+        android:id="@+id/btnConfirmaSalida2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Confirmar Salida" />
+
+    <Button
+        android:id="@+id/btnMuestraEquipos2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Ver Equipos" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Regresar" />
+</LinearLayout>
