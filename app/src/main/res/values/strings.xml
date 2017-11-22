@@ -1,5 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Rally</string>
+    <string name="Registrar_juez">Registrar Juez</string>
+    <string name="Registrar">Registrar</string>
+    <string name="Nombre_completo">Nombre completo</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Contrase_a">Contraseña</string>
+    <string name="title_activity_class_login">Sign in</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -13,4 +19,6 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+
 </resources>
