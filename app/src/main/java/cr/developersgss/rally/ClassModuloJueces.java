@@ -3,11 +3,11 @@ package cr.developersgss.rally;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ClassMenuJueces extends AppCompatActivity {
+public class ClassModuloJueces extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interface_class_menu_jueces);
+        setContentView(R.layout.interface_class_modulo_jueces);
     }
 }

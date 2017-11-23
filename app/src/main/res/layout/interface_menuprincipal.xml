@@ -7,13 +7,6 @@
     android:paddingHorizontal="@dimen/activity_horizontal_margin"
     android:paddingVertical="@dimen/activity_horizontal_margin">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        tools:text="Menú Principal" />
-
     <Button
         android:id="@+id/buttonRuta"
         android:layout_width="match_parent"
@@ -40,7 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:onClick="clickJueces"
         android:text="Jueces" />
 
     <Button

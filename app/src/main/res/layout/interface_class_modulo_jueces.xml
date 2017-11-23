@@ -1,52 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="15dp"
-        android:text="Modulo Jueces"
+        android:text="@string/Modulo_juez"
         android:textAlignment="center"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/btnJuecesRegistrar"
+        android:id="@+id/button7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Registrar "
-        android:textAlignment="center" />
+        android:text="@string/Registrar" />
 
     <Button
-        android:id="@+id/btnJuecesModificar"
+        android:id="@+id/button8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Consultar" />
+        android:text="@string/Consultar" />
 
     <Button
-        android:id="@+id/btnJuecesModificar"
+        android:id="@+id/button9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Modificar" />
+        android:text="@string/Modificar" />
 
     <Button
-        android:id="@+id/btnJuecesEliminar"
+        android:id="@+id/button10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Eliminar" />
-
-    <Button
-        android:id="@+id/btnJuecesRegresar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Regresar" />
+        android:text="@string/Eliminar" />
 </LinearLayout>
-

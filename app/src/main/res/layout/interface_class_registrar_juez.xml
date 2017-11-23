@@ -10,12 +10,10 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:text="Registrar Juez"
         android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="30sp" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -25,7 +23,7 @@
             android:id="@+id/RegistrarJuezNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:hint="@string/Nombre_completo" />
 
     </android.support.design.widget.TextInputLayout>
@@ -38,6 +36,7 @@
             android:id="@+id/RegistrarJuezUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:hint="@string/Usuario" />
     </android.support.design.widget.TextInputLayout>
 
@@ -49,6 +48,7 @@
             android:id="@+id/RegistrarJuezContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:hint="@string/Contrase_a" />
 
     </android.support.design.widget.TextInputLayout>
@@ -57,7 +57,7 @@
         android:id="@+id/BtnRegistrarJuez"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/Registrar"
         android:textAlignment="center"
         android:textSize="18sp" />

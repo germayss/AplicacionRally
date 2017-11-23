@@ -1,24 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Rally</string>
-    <!--registrar juez-->
 
+    <string name="app_name">Rally</string>
     <string name="Registrar_juez">Registrar Juez</string>
     <string name="Registrar">Registrar</string>
     <string name="Nombre_completo">Nombre completo</string>
     <string name="Usuario">Usuario</string>
     <string name="Contrase_a">Contraseña</string>
 
-
-    <!--- login-->
-
-    <string name="Button">Ingresar</string>
+    <!--login-->
     <string name="LoginContrase_a">Contraseña</string>
-    <string name="Login_Usuario">Usuario</string>
+    <string name="LoginUsuario">Usuario</string>
     <string name="Ingresar">Ingresar</string>
-    <string name="Registrarse">Registrarse</string>
 
-
-
+    <!--Modulo juez-->
+    <string name="Modulo_juez">Modulo Juez</string>
+    <string name="Registrar">Registrar</string>
+    <string name="Consultar">Consultar</string>
+    <string name="Modificar">Modificar</string>
+    <string name="Eliminar">eliminar</string>
 
 
 </resources>
