@@ -23,14 +23,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MantenimientoJueces.ClassRegistrarJuez" />
+        <activity android:name=".ModuloJueces.ClassRegistrarJuez" />
         <activity android:name=".MenuPrincipal.ClassMenuJueces" />
         <activity android:name=".Login.ClassCambioContrasena" />
         <activity android:name=".MenuPrincipal.ClassMenuPrincipal" />
         <activity android:name=".MenuPrincipal.ClassMenuRuta" />
         <activity android:name=".MenuPrincipal.ClassMenuEquipos" />
         <activity android:name=".MenuPrincipal.ClassMenuAdministradores" />
-
+        <activity android:name=".MenuPrincipal.ClassMenuPruebas" />
+        <activity android:name=".ModuloJueces.ClassConsultaJuez" />
+        <activity android:name=".ModuloJueces.ClassListadoJuez" />
+        <activity android:name=".ModuloJueces.ClassModificar" />
+        <activity android:name=".ModuloJueces.ClassEliminarJuez" />
+        <activity android:name=".ModuloRallyUsuario.ClassIniciarRally" />
+        <activity android:name=".ModuloRallyUsuario.ClassSeguirRuta" />
+        <activity android:name=".ModuloRallyUsuario.ClassPrueba"></activity>
     </application>
 
 </manifest>

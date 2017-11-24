@@ -40,4 +40,9 @@ public class ClassMenuPrincipal extends AppCompatActivity {
         Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this,ClassMenuRuta.class);
         startActivity(SiguienteActividad);
     }
+    public void onClickPruebas(View view)
+    {
+        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this,ClassMenuPruebas.class);
+        startActivity(SiguienteActividad);
+    }
 }
