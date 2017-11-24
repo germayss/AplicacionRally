@@ -12,7 +12,7 @@ import cr.developersgss.rally.R;
 public class ClassJuezAsignaPrueba extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_juez_asigna_prueba);
     }

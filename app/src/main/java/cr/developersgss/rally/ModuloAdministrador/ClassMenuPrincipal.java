@@ -23,24 +23,23 @@ public class ClassMenuPrincipal extends AppCompatActivity {
     }
 
 
-    public void onClickJueces(View view)
-    {
-        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this,ClassMenuJueces.class);
+    public void onClickJueces(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuJueces.class);
         startActivity(SiguienteActividad);
     }
-    public void onClickAdministradores(View view)
-    {
-        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this,ClassMenuAdministradores.class);
+
+    public void onClickAdministradores(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuAdministradores.class);
         startActivity(SiguienteActividad);
     }
-    public void onClickEquipos(View view)
-    {
-        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this,ClassMenuEquipos.class);
+
+    public void onClickEquipos(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuEquipos.class);
         startActivity(SiguienteActividad);
     }
-    public void onClickRuta(View view)
-    {
-        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this,ClassMenuRuta.class);
+
+    public void onClickRuta(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuRuta.class);
         startActivity(SiguienteActividad);
     }
 }
