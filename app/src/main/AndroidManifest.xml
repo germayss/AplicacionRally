@@ -14,9 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".ClassLogin"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ClassRegistrarJuez" />
-        <activity android:name=".ClassLogin" />
-        <activity android:name=".ClassModuloJueces"></activity>
+        <activity android:name=".ClassMenuJueces"></activity>
+        <activity android:name=".ClassCambioContrasena"></activity>
+        <activity android:name=".ClassMenuPrincipal"></activity>
     </application>
 
 </manifest>

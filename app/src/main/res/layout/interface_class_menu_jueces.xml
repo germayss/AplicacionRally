@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="15dp"
-        android:text="@string/Modulo_juez"
+        android:text="@string/Menu_juez"
         android:textAlignment="center"
         android:textSize="24sp" />
 
@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:onClick="onClickRegistrar"
         android:text="@string/Registrar" />
 
     <Button

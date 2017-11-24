@@ -3,6 +3,8 @@ package cr.developersgss.rally;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import cr.developersgss.rally.R;
+
 public class ClassRegistrarJuez extends AppCompatActivity {
 
     @Override

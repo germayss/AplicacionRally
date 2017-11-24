@@ -11,13 +11,15 @@
     <string name="LoginContrase_a">Contraseña</string>
     <string name="LoginUsuario">Usuario</string>
     <string name="Ingresar">Ingresar</string>
+    <string name="Cambio_d_contrase_a">Cambio de contraseña</string>
 
     <!--Modulo juez-->
-    <string name="Modulo_juez">Modulo Juez</string>
-    <string name="Registrar">Registrar</string>
+    <string name="Menu_juez">Menú Jueces</string>
+    <string name="RegistrarJuez">Registrar</string>
     <string name="Consultar">Consultar</string>
     <string name="Modificar">Modificar</string>
     <string name="Eliminar">eliminar</string>
+
 
 
 </resources>
