@@ -1,4 +1,4 @@
-package cr.developersgss.rally.MenuPrincipal;
+package cr.developersgss.rally.ModuloEquipos;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

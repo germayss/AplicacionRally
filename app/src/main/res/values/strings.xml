@@ -6,6 +6,7 @@
     <string name="Nombre_completo">Nombre completo</string>
     <string name="Usuario">Usuario</string>
     <string name="Contrase_a">Contraseña</string>
+    <string name="Contrase_a_Confirmar">Confirme Contraseña</string>
 
     <!--login-->
     <string name="LoginContrase_a">Contraseña</string>

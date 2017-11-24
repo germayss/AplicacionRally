@@ -1,7 +1,9 @@
-package cr.developersgss.rally;
+package cr.developersgss.rally.ModuloRallyJuez;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import cr.developersgss.rally.R;
 
 /**
  * Created by Afi on 23/11/2017.

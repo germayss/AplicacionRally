@@ -1,11 +1,10 @@
-package cr.developersgss.rally.MenuPrincipal;
+package cr.developersgss.rally.ModuloJueces;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import cr.developersgss.rally.MantenimientoJueces.ClassRegistrarJuez;
 import cr.developersgss.rally.R;
 
 public class ClassMenuJueces extends AppCompatActivity {

@@ -1,17 +1,19 @@
-package cr.developersgss.rally;
+package cr.developersgss.rally.ModuloRallyAdministrador;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import cr.developersgss.rally.R;
 
 /**
  * Created by Afi on 23/11/2017.
  */
 
-public class ClassAsignarPruebaAPuntoControl extends AppCompatActivity {
+public class ClassResultadoEquipos extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interface_asignar_pruebas_prueba_asignar);
+        setContentView(R.layout.interface_ranking_resultados_equipos);
     }
 }

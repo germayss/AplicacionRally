@@ -1,10 +1,13 @@
-package cr.developersgss.rally.MenuPrincipal;
+package cr.developersgss.rally.ModuloAdministrador;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import cr.developersgss.rally.ModuloEquipos.ClassMenuEquipos;
+import cr.developersgss.rally.ModuloJueces.ClassMenuJueces;
+import cr.developersgss.rally.ModuloRuta.ClassMenuRuta;
 import cr.developersgss.rally.R;
 
 /**
