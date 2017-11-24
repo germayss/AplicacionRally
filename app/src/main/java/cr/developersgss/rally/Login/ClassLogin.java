@@ -15,14 +15,14 @@ public class ClassLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_class_login);
     }
-    public void onClickLogin(View view)
-    {
-        Intent SiguienteActividad= new Intent(ClassLogin.this, ClassMenuPrincipal.class);
+
+    public void onClickLogin(View view) {
+        Intent SiguienteActividad = new Intent(ClassLogin.this, ClassMenuPrincipal.class);
         startActivity(SiguienteActividad);
     }
-    public void onClickContraseña(View view)
-    {
-        Intent SiguienteActividad= new Intent(ClassLogin.this, ClassCambioContrasena.class);
+
+    public void onClickContraseña(View view) {
+        Intent SiguienteActividad = new Intent(ClassLogin.this, ClassCambioContrasena.class);
         startActivity(SiguienteActividad);
     }
 }

@@ -9,7 +9,7 @@ import cr.developersgss.rally.R;
  * Created by Afi on 23/11/2017.
  */
 
-public class ClassRegistroPruebas extends AppCompatActivity{
+public class ClassRegistroPruebas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

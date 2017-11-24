@@ -15,9 +15,9 @@ public class ClassMenuJueces extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_class_menu_jueces);
     }
-    public void onClickRegistrar(View view)
-    {
-        Intent SiguienteActividad = new Intent(ClassMenuJueces.this,ClassRegistrarJuez.class);
+
+    public void onClickRegistrar(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassRegistrarJuez.class);
         startActivity(SiguienteActividad);
     }
 
