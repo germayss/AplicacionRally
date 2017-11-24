@@ -15,7 +15,8 @@
         android:layout_marginTop="15dp"
         android:text="@string/Menu_juez"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/button7"

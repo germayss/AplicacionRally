@@ -7,11 +7,11 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
         android:text="Pruebas"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
-        android:textSize="50sp" />
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/btnCrear"

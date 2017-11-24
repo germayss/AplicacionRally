@@ -27,7 +27,10 @@
         <activity android:name=".MenuPrincipal.ClassMenuJueces" />
         <activity android:name=".Login.ClassCambioContrasena" />
         <activity android:name=".MenuPrincipal.ClassMenuPrincipal" />
-        <activity android:name=".ModuloJueces.ClassMenuPuntosControl"></activity>
+        <activity android:name=".MenuPrincipal.ClassMenuRuta" />
+        <activity android:name=".MenuPrincipal.ClassMenuEquipos" />
+        <activity android:name=".MenuPrincipal.ClassMenuAdministradores" />
+
     </application>
 
 </manifest>

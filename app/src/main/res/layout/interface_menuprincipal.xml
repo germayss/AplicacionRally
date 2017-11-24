@@ -15,13 +15,15 @@
         android:layout_marginTop="15dp"
         android:text="Menú Principal"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/buttonRuta"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:onClick="onClickRuta"
         android:text="Ruta" />
 
     <Button

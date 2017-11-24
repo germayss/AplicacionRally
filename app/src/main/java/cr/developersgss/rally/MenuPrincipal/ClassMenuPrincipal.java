@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import cr.developersgss.rally.ClassMenuRuta;
 import cr.developersgss.rally.R;
 
 /**
