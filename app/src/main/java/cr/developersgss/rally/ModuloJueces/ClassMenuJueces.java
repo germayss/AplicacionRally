@@ -1,4 +1,4 @@
-package cr.developersgss.rally.MenuPrincipal;
+package cr.developersgss.rally.ModuloJueces;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

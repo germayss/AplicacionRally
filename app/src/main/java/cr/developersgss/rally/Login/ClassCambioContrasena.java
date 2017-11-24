@@ -10,6 +10,6 @@ public class ClassCambioContrasena extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_class_cambio_contrasena);
+        setContentView(R.layout.interface_class_cambio_contrasena);
     }
 }

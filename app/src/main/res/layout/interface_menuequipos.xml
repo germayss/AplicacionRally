@@ -41,9 +41,4 @@
         android:text="Eliminar"
         android:layout_marginTop="@dimen/activity_horizontal_margin" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Regresar"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
 </LinearLayout>

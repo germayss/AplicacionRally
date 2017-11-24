@@ -5,11 +5,11 @@ import android.os.Bundle;
 import cr.developersgss.rally.R;
 
 
-public class ClassIniciarRally extends AppCompatActivity {
+public class ClassSalirPuntoControl extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interface_class_iniciar_rally);
+        setContentView(R.layout.interface_class_salir_punto_control);
     }
 }

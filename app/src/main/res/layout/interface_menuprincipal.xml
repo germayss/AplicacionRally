@@ -21,22 +21,22 @@
     <Button
         android:id="@+id/buttonRuta"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:onClick="onClickRuta"
         android:text="Ruta" />
 
     <Button
-        android:id="@+id/buttonPrueba"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Pruebas" />
+        android:text="Pruebas"
+        android:onClick="onClickPruebas"/>
 
     <Button
         android:id="@+id/buttonEquipo"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:onClick="onClickEquipos"
         android:text="Equipos" />
@@ -44,7 +44,7 @@
     <Button
         android:id="@+id/buttonJuez"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:onClick="onClickJueces"
         android:text="Jueces" />
@@ -52,9 +52,27 @@
     <Button
         android:id="@+id/buttonAdmintrador"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:onClick="onClickAdministradores"
         android:text="Administradores" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Rally Usuarios"
+        android:onClick="onClickRallyUsuario"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Rally Jueces"
+        android:onClick="onClickRallyJueces"
+        android:textAlignment="center" />
 
 </LinearLayout>

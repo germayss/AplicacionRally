@@ -16,42 +16,37 @@
     <Button
         android:id="@+id/btnCrear"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Crear" />
+        android:onClick="onClickRegistrar"
+        android:text="Registrar" />
 
     <Button
         android:id="@+id/btnConsultar"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Consultar" />
 
     <Button
         android:id="@+id/btnModificar"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Modificar" />
 
     <Button
         android:id="@+id/btnEliminar"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Eliminar" />
 
     <Button
         android:id="@+id/btnAsignar"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Asignar" />
 
-    <Button
-        android:id="@+id/btnRegresar"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Regresar" />
 </LinearLayout>

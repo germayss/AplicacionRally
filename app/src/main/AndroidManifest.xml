@@ -24,20 +24,26 @@
             </intent-filter>
         </activity>
         <activity android:name=".ModuloJueces.ClassRegistrarJuez" />
-        <activity android:name=".MenuPrincipal.ClassMenuJueces" />
+        <!-- HEAD -->
+
         <activity android:name=".Login.ClassCambioContrasena" />
-        <activity android:name=".MenuPrincipal.ClassMenuPrincipal" />
-        <activity android:name=".MenuPrincipal.ClassMenuRuta" />
-        <activity android:name=".MenuPrincipal.ClassMenuEquipos" />
-        <activity android:name=".MenuPrincipal.ClassMenuAdministradores" />
-        <activity android:name=".MenuPrincipal.ClassMenuPruebas" />
-        <activity android:name=".ModuloJueces.ClassConsultaJuez" />
+        <activity android:name=".ModuloPruebas.ClassMenuPruebas" />
         <activity android:name=".ModuloJueces.ClassListadoJuez" />
         <activity android:name=".ModuloJueces.ClassModificar" />
         <activity android:name=".ModuloJueces.ClassEliminarJuez" />
         <activity android:name=".ModuloRallyUsuario.ClassIniciarRally" />
         <activity android:name=".ModuloRallyUsuario.ClassSeguirRuta" />
-        <activity android:name=".ModuloRallyUsuario.ClassPrueba"></activity>
+        <activity android:name=".ModuloRallyUsuario.ClassPrueba" />
+        <activity android:name=".ModuloJueces.ClassMenuJueces" />
+        <activity android:name=".ModuloAdministrador.ClassMenuPrincipal" />
+        <activity android:name=".ModuloRuta.ClassMenuRuta" />
+        <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
+        <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
+        <activity android:name=".ModuloRallyUsuario.ClassCodigoControl" />
+        <activity android:name=".ModuloRallyUsuario.ClassPuntosExtra" />
+        <activity android:name=".ModuloRallyUsuario.ClassSalirPuntoControl" />
+        <activity android:name=".ModuloRallyUsuario.ClassIniciarPruebas"></activity>
+        <activity android:name=".ModuloPruebas.ClassRegistroPruebas"></activity>
     </application>
 
 </manifest>
