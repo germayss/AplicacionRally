@@ -20,6 +20,16 @@
     <string name="Modificar">Modificar</string>
     <string name="Eliminar">eliminar</string>
 
+    <!--- menu de puntos de control-->
+    <string name="Puntos_de_control">Puntos de Control</string>
+    <string name="Confirmar_llegada">Confirmar Llegada</string>
+    <string name="Asignar_prueba">Asignar Prueba</string>
+    <string name="Confirmar_salida">Confirmar Salida</string>
+    <string name="supervisi_n_de_puntos_de_control">Supervisión de puntos de control</string>
+
+
+
+
 
 
 </resources>

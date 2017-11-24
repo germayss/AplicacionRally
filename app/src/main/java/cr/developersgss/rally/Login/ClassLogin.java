@@ -1,9 +1,12 @@
-package cr.developersgss.rally;
+package cr.developersgss.rally.Login;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import cr.developersgss.rally.MenuPrincipal.ClassMenuPrincipal;
+import cr.developersgss.rally.R;
 
 public class ClassLogin extends AppCompatActivity {
 

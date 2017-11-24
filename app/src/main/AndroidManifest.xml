@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ClassLogin"
+            android:name=".Login.ClassLogin"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClassRegistrarJuez" />
-        <activity android:name=".ClassMenuJueces"></activity>
-        <activity android:name=".ClassCambioContrasena"></activity>
-        <activity android:name=".ClassMenuPrincipal"></activity>
+        <activity android:name=".MantenimientoJueces.ClassRegistrarJuez" />
+        <activity android:name=".MenuPrincipal.ClassMenuJueces" />
+        <activity android:name=".Login.ClassCambioContrasena" />
+        <activity android:name=".MenuPrincipal.ClassMenuPrincipal" />
+        <activity android:name=".ModuloJueces.ClassMenuPuntosControl"></activity>
     </application>
 
 </manifest>
