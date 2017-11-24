@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by Afi on 22/11/2017.
+ * Created by Afi on 23/11/2017.
  */
 
-public class ClassRallyAdministrador extends AppCompatActivity{
+public class ClassEliminarPruebas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interface_rallyadministrador);
+        setContentView(R.layout.interface_eliminar_pruebas);
     }
 }
