@@ -1,8 +1,11 @@
 package cr.developersgss.rally.ModuloPruebas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
+import cr.developersgss.rally.ModuloAdministrador.ClassMenuPrincipal;
 import cr.developersgss.rally.R;
 
 /**
@@ -15,5 +18,10 @@ public class ClassMenuPruebas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_menupruebas);
+    }
+    public void onClickRegistrar(View view)
+    {
+        Intent SiguienteActividad = new Intent(ClassMenuPruebas.this, ClassRegistroPruebas.class);
+        startActivity(SiguienteActividad);
     }
 }

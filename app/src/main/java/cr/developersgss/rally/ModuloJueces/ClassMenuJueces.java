@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import cr.developersgss.rally.ModuloJueces.ClassRegistrarJuez;
 import cr.developersgss.rally.R;
 
 public class ClassMenuJueces extends AppCompatActivity {
@@ -19,4 +20,8 @@ public class ClassMenuJueces extends AppCompatActivity {
         Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassRegistrarJuez.class);
         startActivity(SiguienteActividad);
     }
+
 }
+
+
+

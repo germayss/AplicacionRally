@@ -1,15 +1,15 @@
-package cr.developersgss.rally.Login;
+package cr.developersgss.rally.ModuloRallyUsuario;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import cr.developersgss.rally.R;
 
-public class ClassCambioContrasena extends AppCompatActivity {
+
+public class ClassSalirPuntoControl extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interface_class_cambio_contrasena);
+        setContentView(R.layout.interface_class_salir_punto_control);
     }
 }
