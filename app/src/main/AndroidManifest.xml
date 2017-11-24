@@ -30,6 +30,7 @@
         <activity android:name=".ModuloRuta.ClassMenuRuta" />
         <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
         <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
+        <activity android:name=".ModuloRallyAdministrador.ClassResultadoEquipos" />
 
     </application>
 
