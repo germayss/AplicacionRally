@@ -17,33 +17,49 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
     <Button
         android:id="@+id/button7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:onClick="onClickRegistrar"
-        android:text="@string/Registrar" />
+        android:onClick="onClickRegistrarJueces"
+        android:text="@string/Registrar"
+        android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/Consultar" />
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickConsultarJueces"
+                android:text="@string/Consultar"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/Modificar" />
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickModificarJueces"
+                android:text="@string/Modificar"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/Eliminar" />
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickEliminarJueces"
+                android:text="@string/Eliminar"
+                android:textSize="18sp" />
+        </LinearLayout>>
+    </ScrollView>
 </LinearLayout>

@@ -13,6 +13,13 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
     <Button
         android:id="@+id/btnCrear"
@@ -49,5 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="Asignar" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -16,11 +16,22 @@ public class ClassMenuJueces extends AppCompatActivity {
         setContentView(R.layout.interface_class_menu_jueces);
     }
 
-    public void onClickRegistrar(View view) {
+    public void onClickRegistrarJueces(View view) {
         Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassRegistrarJuez.class);
         startActivity(SiguienteActividad);
     }
-
+    public void onClickModificarJueces(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassModificarJuez.class);
+        startActivity(SiguienteActividad);
+    }
+    public void onClickConsultarJueces(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassListadoJuez.class);
+        startActivity(SiguienteActividad);
+    }
+    public void onClickEliminarJueces(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassEliminarJuez.class);
+        startActivity(SiguienteActividad);
+    }
 }
 
 

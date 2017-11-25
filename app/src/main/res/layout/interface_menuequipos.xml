@@ -13,7 +13,13 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
@@ -48,5 +54,7 @@
         android:layout_height="65dp"
         android:text="Regresar"
         android:layout_marginTop="@dimen/activity_horizontal_margin" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

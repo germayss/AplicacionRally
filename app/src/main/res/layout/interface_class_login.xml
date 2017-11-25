@@ -6,6 +6,15 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -36,24 +45,27 @@
 
     </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_weight="1"
-        android:keyboardNavigationCluster="false"
-        android:onClick="onClickLogin"
-        android:text="@string/Ingresar"
-        android:textAlignment="center"
-        tools:targetApi="o" />
+            <Button
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:keyboardNavigationCluster="false"
+                android:onClick="onClickLogin"
+                android:text="@string/Ingresar"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:targetApi="o" />
 
-    <Button
-        android:id="@+id/btnContraseña"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClickContraseña"
-        android:text="@string/Cambio_d_contrase_a" />
-
+            <Button
+                android:id="@+id/btnContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickContraseña"
+                android:text="@string/Cambio_d_contrase_a"
+                android:textSize="18sp" />
+</LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -11,68 +11,82 @@
         android:id="@+id/txtMenuprincipal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
         android:text="Menú Principal"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
-
-    <Button
-        android:id="@+id/buttonRuta"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:onClick="onClickRuta"
-        android:text="Ruta" />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Pruebas"
-        android:onClick="onClickPruebas"/>
+            <Button
+                android:id="@+id/buttonRuta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickRuta"
+                android:text="Ruta"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/buttonEquipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:onClick="onClickEquipos"
-        android:text="Equipos" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickPruebas"
+                android:text="Pruebas"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/buttonJuez"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:onClick="onClickJueces"
-        android:text="Jueces" />
+            <Button
+                android:id="@+id/buttonEquipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickEquipos"
+                android:text="Equipos"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/buttonAdmintrador"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:onClick="onClickAdministradores"
-        android:text="Administradores" />
+            <Button
+                android:id="@+id/buttonJuez"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickJueces"
+                android:text="Jueces"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Rally Usuarios"
-        android:onClick="onClickRallyUsuario"
-        android:textAlignment="center" />
+            <Button
+                android:id="@+id/buttonAdmintrador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickAdministradores"
+                android:text="Administradores"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Rally Jueces"
-        android:onClick="onClickRallyJueces"
-        android:textAlignment="center" />
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickRallyUsuario"
+                android:text="Rally Usuarios"
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickRallyJueces"
+                android:text="Rally Jueces"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

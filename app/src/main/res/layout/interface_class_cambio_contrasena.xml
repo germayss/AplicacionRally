@@ -15,7 +15,15 @@
         android:layout_marginTop="15dp"
         android:text="Cambio de contraseña"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -59,10 +67,13 @@
             android:hint="Confirmar contrasña" />
     </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Modificar" />
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Modificar"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

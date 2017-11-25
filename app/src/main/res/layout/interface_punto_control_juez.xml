@@ -13,7 +13,14 @@
         android:text="Punto de control"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
-        android:textSize="50sp" />
+        android:textSize="36sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/textView5"
@@ -55,5 +62,8 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="137dp"
         tools:layout_editor_absoluteY="372dp" />
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>
