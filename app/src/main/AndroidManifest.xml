@@ -39,16 +39,19 @@
         <activity android:name=".ModuloRuta.ClassMenuRuta" />
         <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
         <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
-<<<<<<< HEAD
+
         <activity android:name=".ModuloRallyAdministrador.ClassResultadoEquipos" />
 
-=======
+
         <activity android:name=".ModuloRallyUsuario.ClassCodigoControl" />
         <activity android:name=".ModuloRallyUsuario.ClassPuntosExtra" />
         <activity android:name=".ModuloRallyUsuario.ClassSalirPuntoControl" />
+        <activity android:name=".ModuloRallyJuez.ClassPuntodeControl" />
+        <activity android:name=".ModuloRallyJuez.Class_equipoenPuntoJuez" />
+        <activity android:name=".ModuloRallyJuez.ClassJuezAsignaPrueba" />
+        <activity android:name=".ModuloRallyJuez.ClassRallyJuez" />
         <activity android:name=".ModuloRallyUsuario.ClassIniciarPruebas"></activity>
         <activity android:name=".ModuloPruebas.ClassRegistroPruebas"></activity>
->>>>>>> 6085b7d51e4877d6546d33eef8f72dac1efc226e
     </application>
 
 </manifest>

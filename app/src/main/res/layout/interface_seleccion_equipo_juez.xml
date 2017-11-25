@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
     <TextView
@@ -24,30 +25,34 @@
         tools:layout_editor_absoluteY="89dp"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btnRegresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regresar"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="372dp"
-        tools:ignore="MissingConstraints" />
-
     <Spinner
         android:id="@+id/Dropdown_equipos"
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="155dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="155dp" />
 
     <Button
         android:id="@+id/btnAceptar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="onClickquipoPuntoJuez"
         android:text="Aceptar"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="248dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="248dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+</LinearLayout>

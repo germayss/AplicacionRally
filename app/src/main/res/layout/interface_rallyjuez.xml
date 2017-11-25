@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Asignar Prueba" />
+        android:text="Asignar Prueba"
+        android:onClick="onClickAsignaPrueba"/>
 
     <Button
         android:id="@+id/btnConfirmaSalida2"

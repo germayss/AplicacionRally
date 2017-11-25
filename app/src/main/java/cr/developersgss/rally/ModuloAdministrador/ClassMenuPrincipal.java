@@ -8,6 +8,8 @@ import android.view.View;
 import cr.developersgss.rally.ModuloEquipos.ClassMenuEquipos;
 import cr.developersgss.rally.ModuloJueces.ClassMenuJueces;
 import cr.developersgss.rally.ModuloPruebas.ClassMenuPruebas;
+import cr.developersgss.rally.ModuloRallyJuez.ClassPuntodeControl;
+import cr.developersgss.rally.ModuloRallyUsuario.ClassIniciarRally;
 import cr.developersgss.rally.ModuloRuta.ClassMenuRuta;
 import cr.developersgss.rally.R;
 
@@ -50,12 +52,12 @@ public class ClassMenuPrincipal extends AppCompatActivity {
     }
     public void onClickRallyUsuario(View view)
     {
-        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuPruebas.class);
+        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassIniciarRally.class);
         startActivity(SiguienteActividad);
     }
     public void onClickRallyJueces(View view)
     {
-        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuPruebas.class);
+        Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassPuntodeControl.class);
         startActivity(SiguienteActividad);
     }
 }

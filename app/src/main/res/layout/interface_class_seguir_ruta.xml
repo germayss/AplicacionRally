@@ -38,6 +38,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginTop="20dp"
+       android:onClick="onClickLlgada"
        android:text="@string/Llegada_a_punto_de_control" />
 
    <Button
@@ -45,5 +46,6 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginTop="20dp"
+       android:onClick="onClickPuntosExtra"
        android:text="@string/Puntos_extra" />
 </LinearLayout>

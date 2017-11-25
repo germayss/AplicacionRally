@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="128dp"
             android:layout_marginTop="200dp"
+            android:onClick="onClickIniciarRally"
             android:text="Iniciar Rally"
             android:textAlignment="center"
             android:textSize="36sp" />

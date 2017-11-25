@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
+        android:onClick="onClickSalirPunto"
         android:text="Salir del punto de control"
         android:textAlignment="center"
         android:textSize="30sp" />
