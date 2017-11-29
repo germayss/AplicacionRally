@@ -9,41 +9,41 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_weight="1">
-
-
-        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/Contrase_a" />
+            android:orientation="vertical">
 
-    </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_weight="1">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_weight="1">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txtLoginUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Usuario"
+                    android:singleLine="true" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/txtLoginUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/Usuario"
-            android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
 
-    </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1">
+
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txtLoginPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Contrase_a" />
+
+            </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/btnIngresar"
@@ -66,6 +66,6 @@
                 android:onClick="onClickContraseña"
                 android:text="@string/Cambio_d_contrase_a"
                 android:textSize="18sp" />
-</LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
