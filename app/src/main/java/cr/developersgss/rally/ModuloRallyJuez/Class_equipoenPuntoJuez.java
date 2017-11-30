@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import cr.developersgss.rally.ModuloRallyUsuario.ClassIniciarPruebas;
-import cr.developersgss.rally.ModuloRallyUsuario.ClassPrueba;
 import cr.developersgss.rally.R;
 
 /**
@@ -20,9 +18,9 @@ public class Class_equipoenPuntoJuez extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_seleccion_equipo_juez);
     }
-    public void onClickquipoPuntoJuez(View view)
-    {
-        Intent SiguienteActividad = new Intent(Class_equipoenPuntoJuez.this,ClassRallyJuez.class);
+
+    public void onClickquipoPuntoJuez(View view) {
+        Intent SiguienteActividad = new Intent(Class_equipoenPuntoJuez.this, ClassRallyJuez.class);
         startActivity(SiguienteActividad);
     }
 }

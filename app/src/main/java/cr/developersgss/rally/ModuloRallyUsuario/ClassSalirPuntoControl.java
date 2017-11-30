@@ -1,8 +1,8 @@
 package cr.developersgss.rally.ModuloRallyUsuario;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import cr.developersgss.rally.ModuloAdministrador.ClassMenuPrincipal;
@@ -17,9 +17,8 @@ public class ClassSalirPuntoControl extends AppCompatActivity {
         setContentView(R.layout.interface_class_salir_punto_control);
     }
 
-    public void onClickSalirPunto(View view)
-    {
-        Intent SiguienteActividad = new Intent(ClassSalirPuntoControl.this,ClassMenuPrincipal.class);
+    public void onClickSalirPunto(View view) {
+        Intent SiguienteActividad = new Intent(ClassSalirPuntoControl.this, ClassMenuPrincipal.class);
         startActivity(SiguienteActividad);
     }
 }

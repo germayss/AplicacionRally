@@ -14,54 +14,56 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="Seleccione el punto de control"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="89dp" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Seleccione el punto de control"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="89dp" />
 
-    <Spinner
-        android:id="@+id/Dropdown_puntos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="155dp" />
+            <Spinner
+                android:id="@+id/Dropdown_puntos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="155dp" />
 
-    <Button
-        android:id="@+id/btnAceptar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:onClick="onClickPuntoControl"
-        android:text="Aceptar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="248dp" />
+            <Button
+                android:id="@+id/btnAceptar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickPuntoControl"
+                android:text="Aceptar"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="248dp" />
 
-    <Button
-        android:id="@+id/btnRegresar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Regresar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="372dp" />
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Regresar"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="372dp" />
         </LinearLayout>
     </ScrollView>
 

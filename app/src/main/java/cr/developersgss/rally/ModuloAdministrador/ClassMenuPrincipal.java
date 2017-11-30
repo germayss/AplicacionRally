@@ -25,7 +25,6 @@ public class ClassMenuPrincipal extends AppCompatActivity {
         setContentView(R.layout.interface_menuprincipal);
     }
 
-
     public void onClickJueces(View view) {
         Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuJueces.class);
         startActivity(SiguienteActividad);
@@ -45,18 +44,18 @@ public class ClassMenuPrincipal extends AppCompatActivity {
         Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuRuta.class);
         startActivity(SiguienteActividad);
     }
-    public void onClickPruebas(View view)
-    {
+
+    public void onClickPruebas(View view) {
         Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassMenuPruebas.class);
         startActivity(SiguienteActividad);
     }
-    public void onClickRallyUsuario(View view)
-    {
+
+    public void onClickRallyUsuario(View view) {
         Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassIniciarRally.class);
         startActivity(SiguienteActividad);
     }
-    public void onClickRallyJueces(View view)
-    {
+
+    public void onClickRallyJueces(View view) {
         Intent SiguienteActividad = new Intent(ClassMenuPrincipal.this, ClassPuntodeControl.class);
         startActivity(SiguienteActividad);
     }

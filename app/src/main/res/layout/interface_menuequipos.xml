@@ -13,47 +13,50 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Crear"
-        android:layout_marginTop="@dimen/activity_horizontal_margin" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Modificar"
-        android:layout_marginTop="@dimen/activity_horizontal_margin" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Crear"
+                android:layout_marginTop="@dimen/activity_horizontal_margin" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Consultar"
-        android:layout_marginTop="@dimen/activity_horizontal_margin" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Modificar"
+                android:layout_marginTop="@dimen/activity_horizontal_margin" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Eliminar"
-        android:layout_marginTop="@dimen/activity_horizontal_margin" />
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Consultar"
+                android:layout_marginTop="@dimen/activity_horizontal_margin" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Eliminar"
+                android:layout_marginTop="@dimen/activity_horizontal_margin" />
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="Regresar"
-        android:layout_marginTop="@dimen/activity_horizontal_margin" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Regresar"
+                android:layout_marginTop="@dimen/activity_horizontal_margin" />
         </LinearLayout>
     </ScrollView>
 

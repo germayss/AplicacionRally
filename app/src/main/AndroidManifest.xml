@@ -15,17 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Login.ClassLoginInterface"
-            android:label="@string/app_name">
+            android:name=".Login.ClassLogin"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ModuloJueces.ClassRegistrarJuez" />
-
-
         <activity android:name=".Login.ClassCambioContrasena" />
         <activity android:name=".ModuloPruebas.ClassMenuPruebas" />
         <activity android:name=".ModuloJueces.ClassListadoJuez" />
@@ -39,10 +37,7 @@
         <activity android:name=".ModuloRuta.ClassMenuRuta" />
         <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
         <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
-
         <activity android:name=".ModuloRallyAdministrador.ClassResultadoEquipos" />
-
-
         <activity android:name=".ModuloRallyUsuario.ClassCodigoControl" />
         <activity android:name=".ModuloRallyUsuario.ClassPuntosExtra" />
         <activity android:name=".ModuloRallyUsuario.ClassSalirPuntoControl" />
