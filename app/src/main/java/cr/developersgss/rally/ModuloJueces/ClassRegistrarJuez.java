@@ -15,7 +15,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.loopj.android.http.*;
 import org.json.JSONObject;
 import cr.developersgss.rally.R;
 
@@ -29,11 +28,6 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
     //conexion con el ws
     RequestQueue request;
     JsonObjectRequest jor;
-
-
-    private AsyncHttpClient cliente;
-    private Spinner SpinnerRally;
-
 
 
     @Override

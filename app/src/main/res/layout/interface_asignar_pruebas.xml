@@ -1,45 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
         android:text="Asignar Pruebas"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="38dp" />
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lista de pruebas"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="123dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <GridLayout
-        android:id="@+id/listapruebas"
-        android:layout_width="368dp"
-        android:layout_height="222dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="156dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    </GridLayout>
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="Seleccionar Equipo"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/DropEquipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-        android:id="@+id/btnAceptar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Aceptar"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="400dp" />
-</android.support.constraint.ConstraintLayout>
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+</LinearLayout>
+
+
