@@ -102,7 +102,7 @@ public class ClassLogin extends AppCompatActivity implements Response.Listener<J
     }
 
     public void onClickContraseña(View view) {
-        Intent SiguienteActividad = new Intent(ClassLogin.this, ClassCambioContrasena.class);
+        Intent SiguienteActividad = new Intent(ClassLogin.this,ClassCambioContrasena.class);
         startActivity(SiguienteActividad);
     }
 
@@ -117,6 +117,9 @@ public class ClassLogin extends AppCompatActivity implements Response.Listener<J
     public void onResponse(JSONObject response) {
         progreso.hide();
         Toast.makeText(this,"Mensaje: "+response,Toast.LENGTH_SHORT).show();
+
+        Intent SiguienteActividad = new Intent(ClassLogin.this, ClassMenuPrincipal.class);
+        startActivity(SiguienteActividad);
     }
 
     public void pp(View view) {

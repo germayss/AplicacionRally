@@ -52,11 +52,11 @@
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:keyboardNavigationCluster="false"
+                android:onClick="pp"
                 android:text="@string/Ingresar"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                tools:targetApi="o"
-                android:onClick="pp"/>
+                tools:targetApi="o" />
 
             <Button
                 android:id="@+id/btnContraseña"

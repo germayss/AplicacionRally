@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="onClickRegistrar"
     android:orientation="vertical">
 
     <TextView
@@ -20,16 +21,16 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/RegistrarJuezNombre"
+                    android:id="@+id/txtnombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -42,7 +43,7 @@
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/RegistrarJuezUsuario"
+                    android:id="@+id/txtusuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -54,7 +55,7 @@
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/RegistrarJuezContrasena"
+                    android:id="@+id/txtcontrasena"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -67,9 +68,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:onClick="onClickRegistrarJueces"
                 android:text="@string/Registrar"
                 android:textAlignment="center"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
+
+    <Spinner
+        android:id="@+id/SpinnerRally"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
