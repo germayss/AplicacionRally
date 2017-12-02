@@ -12,4 +12,6 @@ public class ClassCambioContrasena extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_class_cambio_contrasena);
     }
+
+
 }

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Pruebas"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/black"
         android:textSize="36sp" />
 
     <ScrollView
