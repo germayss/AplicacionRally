@@ -26,8 +26,8 @@
         <activity android:name=".ModuloJueces.ClassRegistrarJuez" />
         <activity android:name=".Login.ClassCambioContrasena" />
         <activity android:name=".ModuloPruebas.ClassMenuPruebas" />
-        <activity android:name=".ModuloJueces.ClassListadoJuez" />
         <activity android:name=".ModuloJueces.ClassModificarJuez" />
+        <activity android:name=".ModuloJueces.ClassConsultaJuez" />
         <activity android:name=".ModuloJueces.ClassEliminarJuez" />
         <activity android:name=".ModuloRallyUsuario.ClassIniciarRally" />
         <activity android:name=".ModuloRallyUsuario.ClassSeguirRuta" />

@@ -26,7 +26,7 @@ public class ClassMenuJueces extends AppCompatActivity {
     }
 
     public void onClickConsultarJueces(View view) {
-        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassListadoJuez.class);
+        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassConsultaJuez.class);
         startActivity(SiguienteActividad);
     }
 

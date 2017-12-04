@@ -6,11 +6,9 @@ import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,10 +22,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import cr.developersgss.rally.Login.IDPunto;
-import cr.developersgss.rally.Login.IDRally;
+import cr.developersgss.rally.Objetos.IDPunto;
+import cr.developersgss.rally.Objetos.IDRally;
 import cr.developersgss.rally.R;
 
 
@@ -55,7 +52,7 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
         setContentView(R.layout.interface_class_registrar_juez);
 
 
-       lista_rallys= new ArrayList<>();
+        lista_rallys= new ArrayList<>();
         lista_puntos= new ArrayList<>();
         txtnombre = (TextInputEditText) findViewById(R.id.txtnombre);
         txtusuario = (TextInputEditText) findViewById(R.id.txtusuario);
@@ -129,7 +126,7 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
         txtnombre.setText("");
         txtcontrasena.setText("");
         txtusuario.setText("");
-        Toast.makeText(this, "Error verifique los datos " + error.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "No se puede conectar " + error.toString(), Toast.LENGTH_SHORT).show();
         Log.i("ERROR", error.toString());
     }
 

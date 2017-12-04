@@ -41,7 +41,8 @@
                     android:id="@+id/txtLoginPass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/Contrase_a" />
+                    android:hint="@string/Contrase_a"
+                    android:inputType="textPassword" />
 
             </android.support.design.widget.TextInputLayout>
 

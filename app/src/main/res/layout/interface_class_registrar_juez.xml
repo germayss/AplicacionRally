@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="onClickRegistrar"
+    android:layout_margin="@dimen/activity_horizontal_margin"
     android:orientation="vertical">
 
     <TextView
@@ -67,7 +68,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
@@ -85,11 +86,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
             </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
@@ -103,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
-        </LinearLayout>
+            </LinearLayout>
 
             <Button
                 android:id="@+id/BtnRegistrarJuez"
