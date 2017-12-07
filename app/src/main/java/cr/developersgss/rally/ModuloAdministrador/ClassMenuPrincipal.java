@@ -8,7 +8,7 @@ import android.view.View;
 import cr.developersgss.rally.ModuloEquipos.ClassMenuEquipos;
 import cr.developersgss.rally.ModuloJueces.ClassMenuJueces;
 import cr.developersgss.rally.ModuloPruebas.ClassMenuPruebas;
-import cr.developersgss.rally.ModuloRallyJuez.ClassPuntodeControl;
+import cr.developersgss.rally.ModuloEquipos.ModuloRallyJuez.ClassPuntodeControl;
 import cr.developersgss.rally.ModuloRallyUsuario.ClassIniciarRally;
 import cr.developersgss.rally.ModuloRuta.ClassMenuRuta;
 import cr.developersgss.rally.R;
