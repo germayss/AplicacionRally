@@ -33,7 +33,7 @@
                 android:layout_marginTop="15dp"
                 android:onClick="onClickRegistrarJueces"
                 android:text="@string/Registrar"
-                android:textSize="18sp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/button8"
@@ -42,26 +42,19 @@
                 android:layout_marginTop="15dp"
                 android:onClick="onClickConsultarJueces"
                 android:text="@string/Consultar"
-                android:textSize="18sp" />
-
+                android:textSize="30sp" />
             <Button
                 android:id="@+id/button9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:onClick="onClickModificarJueces"
-                android:text="@string/Modificar"
-                android:textSize="18sp" />
+                android:onClick="onClickRegresarJueces"
+                android:text="Regresar"
+                android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:onClick="onClickEliminarJueces"
-                android:text="@string/Eliminar"
-                android:textSize="18sp" />
+
+
         </LinearLayout>
-        >
+
     </ScrollView>
 </LinearLayout>

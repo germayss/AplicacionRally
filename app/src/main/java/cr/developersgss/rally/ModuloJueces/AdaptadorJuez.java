@@ -18,11 +18,12 @@ import cr.developersgss.rally.R;
  * Created by Krlos on 03/12/2017.
  */
 
-public class AdaptadorJuez extends RecyclerView.Adapter<AdaptadorJuez.ViewHolder> {
+public class AdaptadorJuez extends RecyclerView.Adapter<AdaptadorJuez.ViewHolder>
+        implements View.OnClickListener {
 
     private List<TablaJuez> listajueces;
     private Context context;
-
+private  View.OnClickListener listener;
 
 
     public AdaptadorJuez(List<TablaJuez> listajueces, Context context) {
@@ -34,6 +35,8 @@ public class AdaptadorJuez extends RecyclerView.Adapter<AdaptadorJuez.ViewHolder
     public AdaptadorJuez.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View   v = LayoutInflater.from(parent.getContext()).inflate(R.layout.listado_jueces,parent,false);
 
+
+        v.setOnClickListener(this);
         return  new ViewHolder(v);
     }
 
@@ -47,12 +50,25 @@ public class AdaptadorJuez extends RecyclerView.Adapter<AdaptadorJuez.ViewHolder
         holder.Nombre.setText(lista.getNombre());
         holder.Usuario.setText(lista.getUsuario());
         holder.Contraseña.setText(lista.getContrasena());
-        holder.Tipo.setText(lista.getTipo());
+      //  holder.Tipo.setText(lista.getTipo());
+
+
     }
 
     @Override
     public int getItemCount() {
         return listajueces.size();
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (listener!=null){
+            listener.onClick(view);
+        }
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -68,8 +84,9 @@ public class AdaptadorJuez extends RecyclerView.Adapter<AdaptadorJuez.ViewHolder
             Nombre= itemView.findViewById(R.id.LIDNombre);
             Usuario= itemView.findViewById(R.id.LUsuario);
             Contraseña= itemView.findViewById(R.id.LContrasena);
-            Tipo= itemView.findViewById(R.id.LTipo);
+          //  Tipo= itemView.findViewById(R.id.LTipo);
 
         }
     }
+
 }

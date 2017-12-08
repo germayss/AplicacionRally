@@ -136,9 +136,9 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
         if (llenarSpinner==1){// si el ws da respuesta carga el spinner
 
 
-           IDRally idrally =null;
+            IDRally idrally =null;
 
-           JSONArray json_array =response.optJSONArray("rally");//rally es el identificador del json
+            JSONArray json_array =response.optJSONArray("rally");//rally es el identificador del json
 
 
             try {
@@ -190,7 +190,7 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
 
 
         }else
-            {  // limpa los botones y msj de nuevo juez
+        {  // limpa los botones y msj de nuevo juez
             progreso.hide();
             txtnombre.setText("");
             txtcontrasena.setText("");

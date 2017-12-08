@@ -28,13 +28,15 @@
         <activity android:name=".ModuloPruebas.ClassMenuPruebas" />
         <activity android:name=".ModuloJueces.ClassModificarJuez" />
         <activity android:name=".ModuloJueces.ClassConsultaJuez" />
-        <activity android:name=".ModuloJueces.ClassEliminarJuez" />
         <activity android:name=".ModuloRallyUsuario.ClassIniciarRally" />
         <activity android:name=".ModuloRallyUsuario.ClassSeguirRuta" />
         <activity android:name=".ModuloRallyUsuario.ClassPrueba" />
         <activity android:name=".ModuloJueces.ClassMenuJueces" />
         <activity android:name=".ModuloAdministrador.ClassMenuPrincipal" />
         <activity android:name=".ModuloRuta.ClassMenuRuta" />
+        <activity android:name=".ModuloRuta.ClassRegistroRuta" />
+        <activity android:name=".ModuloRuta.ClassConsultaRuta" />
+        <activity android:name=".ModuloRuta.ClassModificarRuta" />
         <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
         <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
         <activity android:name=".ModuloRallyAdministrador.ClassResultadoEquipos" />

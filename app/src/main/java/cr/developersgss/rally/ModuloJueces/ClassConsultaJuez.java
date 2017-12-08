@@ -6,8 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
-
+import android.view.View;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -24,14 +25,14 @@ import java.util.List;
 
 import cr.developersgss.rally.Objetos.TablaJuez;
 import cr.developersgss.rally.R;
-
+import android.content.Intent;
 public class ClassConsultaJuez extends AppCompatActivity {
 
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adap;
-
     private List<TablaJuez> listajueces;
+
 
     private static final  String URL="https://aplicacionrallygss.000webhostapp.com/ConsultarJuez.php";
 
@@ -43,8 +44,8 @@ public class ClassConsultaJuez extends AppCompatActivity {
      recyclerView= findViewById(R.id.recyclerView);
      recyclerView.setHasFixedSize(true);
      recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
      listajueces= new ArrayList<>();
+
 
      cargarws();
 
@@ -78,8 +79,20 @@ public class ClassConsultaJuez extends AppCompatActivity {
                                 o.getString("Tipo")
 
                                 );
+
                         listajueces.add(item);
-                        adap=new AdaptadorJuez(listajueces,getApplicationContext());
+                      AdaptadorJuez  adap =new AdaptadorJuez(listajueces,getApplicationContext());
+                        adap.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                               String temp=listajueces.get(recyclerView.getChildAdapterPosition(view)).getIDJuez();
+
+                                Intent intent = new Intent(ClassConsultaJuez.this, ClassModificarJuez.class);
+                                intent.putExtra("ID",temp);
+                                startActivity(intent);
+                            }
+                        });
                         recyclerView.setAdapter(adap);
                     }
 
@@ -87,12 +100,11 @@ public class ClassConsultaJuez extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                progressDialog.hide();
                 Toast.makeText(getApplicationContext(), "No se puede conectar " + error.toString(), Toast.LENGTH_SHORT).show();
                 Log.i("ERROR", error.toString());
             }
@@ -101,8 +113,8 @@ public class ClassConsultaJuez extends AppCompatActivity {
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
-
-
     }
+
+
 
 }

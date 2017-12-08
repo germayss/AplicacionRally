@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Datos de ruta"
+        android:text="Registrar Ruta"
         android:textAlignment="center"
         android:textSize="30sp" />
 
@@ -34,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:hint="Fecha del evento" />
+            android:hint="Fecha de inicio yyyy-mm-dd" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -46,15 +58,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:hint="Hora de inicio" />
+            android:hint="Hora de inicio hh:mm:ss"
+            android:inputType="time" />
     </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ID del Rally"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/SpinnerRally"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/BtnRegistrarAdmin"
+        android:id="@+id/BtnRegistrarRuta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:onClick="onClickRegistrarRuta"
         android:text="@string/Registrar"
         android:textAlignment="center"
         android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

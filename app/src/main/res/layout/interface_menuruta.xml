@@ -29,32 +29,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Crear"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Modificar"
-                android:textSize="18sp" />
+                android:onClick="onClickRegistrarRuta1"
+                android:text="Registrar"
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:onClick="onClickConsultarRuta"
                 android:text="Consultar"
-                android:textSize="18sp" />
-
+                android:textSize="30sp" />
             <Button
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Eliminar"
-                android:textSize="18sp" />
+                android:onClick="onClickRegresarRuta"
+                android:text="Regresar"
+                android:textSize="30sp" />
+
         </LinearLayout>
     </ScrollView>
 

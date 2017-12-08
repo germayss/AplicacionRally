@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import cr.developersgss.rally.ModuloAdministrador.ClassMenuPrincipal;
 import cr.developersgss.rally.R;
 
 public class ClassMenuJueces extends AppCompatActivity {
@@ -20,20 +21,16 @@ public class ClassMenuJueces extends AppCompatActivity {
         startActivity(SiguienteActividad);
     }
 
-    public void onClickModificarJueces(View view) {
-        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassModificarJuez.class);
-        startActivity(SiguienteActividad);
-    }
-
     public void onClickConsultarJueces(View view) {
         Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassConsultaJuez.class);
         startActivity(SiguienteActividad);
     }
-
-    public void onClickEliminarJueces(View view) {
-        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassEliminarJuez.class);
+    public void onClickRegresarJueces(View view) {
+        Intent SiguienteActividad = new Intent(ClassMenuJueces.this, ClassMenuPrincipal.class);
         startActivity(SiguienteActividad);
     }
+
+
 }
 
 

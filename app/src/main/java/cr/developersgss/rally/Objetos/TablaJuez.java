@@ -5,6 +5,7 @@ package cr.developersgss.rally.Objetos;
  */
 
 public class TablaJuez {
+
       private  String IDJuez;
       private String IDRally;
       private String Puntocontrol;
@@ -13,6 +14,9 @@ public class TablaJuez {
       private String Contrasena;
       private  String Tipo;
 
+    public TablaJuez() {
+    }
+
     public TablaJuez(String IDJuez, String IDRally, String puntocontrol, String nombre, String usuario, String contrasena, String tipo) {
         this.IDJuez = IDJuez;
         this.IDRally = IDRally;
@@ -20,6 +24,34 @@ public class TablaJuez {
         Nombre = nombre;
         Usuario = usuario;
         Contrasena = contrasena;
+        Tipo = tipo;
+    }
+
+    public void setIDJuez(String IDJuez) {
+        this.IDJuez = IDJuez;
+    }
+
+    public void setIDRally(String IDRally) {
+        this.IDRally = IDRally;
+    }
+
+    public void setPuntocontrol(String puntocontrol) {
+        Puntocontrol = puntocontrol;
+    }
+
+    public void setNombre(String nombre) {
+        Nombre = nombre;
+    }
+
+    public void setUsuario(String usuario) {
+        Usuario = usuario;
+    }
+
+    public void setContrasena(String contrasena) {
+        Contrasena = contrasena;
+    }
+
+    public void setTipo(String tipo) {
         Tipo = tipo;
     }
 
