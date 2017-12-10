@@ -6,7 +6,7 @@ import android.app.Application;
  * Created by Krlos on 09/12/2017.
  */
 
-public class VariablesGlobales extends Application {
+public class Globales extends Application {
 
      private String IDRallyActual;
 

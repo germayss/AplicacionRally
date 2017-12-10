@@ -78,9 +78,9 @@ public class ClassLogin extends AppCompatActivity implements Response.Listener<J
             JSONObject jsonObject = array.getJSONObject(0);
 
             // guarda en variables globales
-           VariablesGlobales global= new VariablesGlobales();
-            global.setIDRallyActual( jsonObject.getString("IDRally"));
-            Toast.makeText(this, "el id rally es "+global.getIDRallyActual() , Toast.LENGTH_SHORT).show();
+            Globales globales = (Globales)getApplication();
+            globales.setIDRallyActual(jsonObject.getString("IDRally"));
+
 
             if (Integer.parseInt(jsonObject.getString("Tipo")) == 3){
                 Intent SiguienteActividad = new Intent(ClassLogin.this, ClassIniciarRally.class);
