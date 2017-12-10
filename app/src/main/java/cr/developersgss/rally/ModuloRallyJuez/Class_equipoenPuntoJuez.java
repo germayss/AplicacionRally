@@ -1,4 +1,4 @@
-package cr.developersgss.rally.ModuloEquipos.ModuloRallyJuez;
+package cr.developersgss.rally.ModuloRallyJuez;
 
 import android.content.Intent;
 import android.os.Bundle;

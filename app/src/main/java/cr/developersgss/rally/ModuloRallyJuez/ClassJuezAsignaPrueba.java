@@ -1,4 +1,4 @@
-package cr.developersgss.rally.ModuloEquipos.ModuloRallyJuez;
+package cr.developersgss.rally.ModuloRallyJuez;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

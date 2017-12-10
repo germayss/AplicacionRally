@@ -38,15 +38,16 @@
         <activity android:name=".ModuloRuta.ClassConsultaRuta" />
         <activity android:name=".ModuloRuta.ClassModificarRuta" />
         <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
+        <activity android:name=".ModuloEquipos.ClassRegistroEquipo" />
         <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
         <activity android:name=".ModuloRallyAdministrador.ClassResultadoEquipos" />
         <activity android:name=".ModuloRallyUsuario.ClassCodigoControl" />
         <activity android:name=".ModuloRallyUsuario.ClassPuntosExtra" />
         <activity android:name=".ModuloRallyUsuario.ClassSalirPuntoControl" />
-        <activity android:name=".ModuloEquipos.ModuloRallyJuez.ClassPuntodeControl" />
-        <activity android:name=".ModuloEquipos.ModuloRallyJuez.Class_equipoenPuntoJuez" />
-        <activity android:name=".ModuloEquipos.ModuloRallyJuez.ClassJuezAsignaPrueba" />
-        <activity android:name=".ModuloEquipos.ModuloRallyJuez.ClassRallyJuez" />
+        <activity android:name=".ModuloRallyJuez.ClassPuntodeControl" />
+        <activity android:name=".ModuloRallyJuez.Class_equipoenPuntoJuez" />
+        <activity android:name=".ModuloRallyJuez.ClassJuezAsignaPrueba" />
+        <activity android:name=".ModuloRallyJuez.ClassRallyJuez" />
         <activity android:name=".ModuloRallyUsuario.ClassIniciarPruebas"></activity>
         <activity android:name=".ModuloPruebas.ClassRegistroPruebas"></activity>
     </application>

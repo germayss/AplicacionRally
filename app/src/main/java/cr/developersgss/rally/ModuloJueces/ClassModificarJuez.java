@@ -1,6 +1,7 @@
 package cr.developersgss.rally.ModuloJueces;
 
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -64,7 +65,7 @@ public class ClassModificarJuez extends AppCompatActivity implements Response.Li
 
          if (actividad==1) {
             request = Volley.newRequestQueue(this);
-            progreso = new ProgressDialog(this);
+            progreso = new ProgressDialog(this,AlertDialog.THEME_HOLO_DARK);
             progreso.setMessage("Buscando...");
             progreso.show();
 
@@ -82,7 +83,7 @@ public class ClassModificarJuez extends AppCompatActivity implements Response.Li
 
             //modificar juez en la bd
             request = Volley.newRequestQueue(this);
-            progreso = new ProgressDialog(this);
+            progreso = new ProgressDialog(this,AlertDialog.THEME_HOLO_DARK);
             progreso.setMessage("Modificando...");
             progreso.show();
 
@@ -106,7 +107,7 @@ public class ClassModificarJuez extends AppCompatActivity implements Response.Li
 
 
             request = Volley.newRequestQueue(this);
-            progreso = new ProgressDialog(this);
+            progreso = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
             progreso.setMessage("Eliminando...");
             progreso.show();
 

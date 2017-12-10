@@ -1,5 +1,6 @@
 package cr.developersgss.rally.ModuloJueces;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
@@ -95,7 +96,7 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
 
         }else {//registra un nuevo juez en la bd
             request = Volley.newRequestQueue(this);
-            progreso = new ProgressDialog(this);
+            progreso = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
             progreso.setMessage("Registrando...");
             progreso.show();
 
