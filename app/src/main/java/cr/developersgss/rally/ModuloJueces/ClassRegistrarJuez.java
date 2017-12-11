@@ -70,7 +70,7 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
                 Globales globales = (Globales)getApplication();
                 String idrally=globales.getIDRallyActual();
 
-                Toast.makeText(this, "id"+idrally, Toast.LENGTH_SHORT).show();
+
 
                 String url = "https://aplicacionrallygss.000webhostapp.com/InsertarJuez.php?" +
                         "IDJuez=NULL&IDRally="+idrally+"&IDPuntoControl=1&UsuarioJuez=" + txtusuario.getText().toString() +

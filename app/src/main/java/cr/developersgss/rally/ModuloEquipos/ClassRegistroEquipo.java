@@ -26,6 +26,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cr.developersgss.rally.Login.Globales;
 import cr.developersgss.rally.Objetos.IDRally;
 import cr.developersgss.rally.R;
 
@@ -42,10 +43,10 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
     Button btnRegistrarEquipo,btnRegistrarMiembro;
     TextInputEditText nombreEquipo,contrasenaEquipo,usuarioEquipo,miembroEquipo;
     CheckBox lider;
-    ArrayList lista_rallys;
-    Spinner SpinnerRally;
+    String idequipo;
 
     private int actividad =1;
+    private Boolean AsignoLider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,39 +58,31 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
         nombreEquipo = (TextInputEditText) findViewById(R.id.txtRegistrarNombreEquipo);
         contrasenaEquipo= (TextInputEditText) findViewById(R.id.txtRegistrarPassEquipo);
         usuarioEquipo = (TextInputEditText) findViewById(R.id.txtRegistrarUsuarioEquipo);
+        miembroEquipo = (TextInputEditText) findViewById(R.id.RegistrarMiembroEquipo);
         btnRegistrarEquipo = (Button) findViewById(R.id.BtnRegistrarEquipo);
-        SpinnerRally= findViewById(R.id.SpinnerRally);
+        btnRegistrarMiembro= (Button) findViewById(R.id.BtnRegistrarMiembroEquipo);
+        lider= findViewById(R.id.CheckLider);
 
-        RegistrarEquipo();
+ btnRegistrarMiembro.setEnabled(false);
 
 
     }
 
     private void RegistrarEquipo() {
 
-        if (actividad == 1) {//carga el spinner del idrally
-            request = Volley.newRequestQueue(this);
+        Globales globales = (Globales)getApplication();
+        String idrally=globales.getIDRallyActual();
+        if (actividad==1){
 
-            try {
-                String url = "https://aplicacionrallygss.000webhostapp.com/SelectIDRally.php";
-                jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
-                request.add(jor);
-            } catch (Error e) {
-
-            }//termina try
-
-        } else {
+            AsignoLider=false;
             request = Volley.newRequestQueue(this);
             progreso = new ProgressDialog(this);
             progreso.setMessage("Registrando...");
             progreso.show();
 
-            String SeleRally=SpinnerRally.getSelectedItem().toString();
-
             try {
-
                 String url = "https://aplicacionrallygss.000webhostapp.com/InsertarEquipo.php?"
-                        +"IDRally="+SeleRally+
+                        +"IDRally="+idrally+
                         "&NombreEquipo="+nombreEquipo.getText().toString()+
                         "&UsuarioEquipo="+usuarioEquipo.getText().toString()+
                         "&PasswordEquipo="+contrasenaEquipo.getText().toString();
@@ -98,70 +91,99 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
             } catch (Error e) {
 
             }//termina try
+        }else{
+
+            try {
+
+               int estadoLider;
+                request = Volley.newRequestQueue(this);
+                progreso = new ProgressDialog(this);
+                progreso.setMessage("Registrando...");
+                progreso.show();
+
+
+                if (AsignoLider){
+
+                    estadoLider=2;
+
+                }else{
+
+                    if (lider.isChecked()){
+                        estadoLider=1;
+                        AsignoLider=true;
+                    }else {
+                        estadoLider=2;
+                    }
+                }
+
+
+                String url = "https://aplicacionrallygss.000webhostapp.com/InsertarPersonaEquipo.php?"+
+                        "IDRally="+idrally.toString()+
+                        "&IDEquipo="+idequipo.toString()+
+                        "&NombrePersonaEquipo="+miembroEquipo.getText().toString()+
+                        "&LiderPersonaEquipo="+estadoLider;
+                jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
+                request.add(jor);
+        } catch (Error e) {
+
+            }//termina try
         }
     }
+
     @Override
     public void onErrorResponse(VolleyError error) {
 
         progreso.hide();
-        /*
-        nombreEquipo.setText("");
-        contrasenaEquipo.setText("");
-        usuarioEquipo.setText("");*/
+            if (actividad==1){
 
-        Toast.makeText(this, "Verifique los datos: " + error.toString(), Toast.LENGTH_SHORT).show();
-        Log.i("ERROR", error.toString());
+                nombreEquipo.setText("");
+                contrasenaEquipo.setText("");
+                usuarioEquipo.setText("");
+
+                Toast.makeText(this, "Verifique los datos: " + error.toString(), Toast.LENGTH_SHORT).show();
+                Log.i("ERROR", error.toString());
+            }else{
+                miembroEquipo.setText("");
+                Toast.makeText(this, "Verifique los datos: " + error.toString(), Toast.LENGTH_SHORT).show();
+               // Log.i("ERROR", error.toString());
+            }
+
     }
 
     @Override
     public void onResponse(JSONObject response) {
+
         if (actividad==1) {// si el ws da respuesta carga el spinner
+            progreso.hide();
 
-
-            IDRally idrally = null;
-
-            JSONArray json_array = response.optJSONArray("rally");//rally es el identificador del json
-
+        nombreEquipo.setText("");
+        contrasenaEquipo.setText("");
+        usuarioEquipo.setText("");
 
             try {
 
-                for (int i = 0; i < json_array.length(); i++) {
-                    idrally = new IDRally();
-                    JSONObject jsonObject = null;
-                    jsonObject = json_array.getJSONObject(i);
-                    idrally.setID(jsonObject.optInt("IDRally"));
-                    lista_rallys.add(idrally.getID());
-
-                }
-
-                ArrayAdapter<IDRally> ids = new ArrayAdapter<IDRally>(this, android.R.layout.simple_list_item_1, lista_rallys);
-                SpinnerRally.setAdapter(ids);
-
+                JSONArray array = response.getJSONArray("equipo");
+                JSONObject  jsonObject = array.getJSONObject(0);
+                idequipo= jsonObject.optString("IDEquipo");
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
-        }else if (actividad==2){
-
-            progreso.hide();
-               /*
-        nombreEquipo.setText("");
-        contrasenaEquipo.setText("");
-        usuarioEquipo.setText("");*/
-
-            Toast.makeText(this, "Se ingreso un nuevo Equipo! ", Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, "Se ingreso un nuevo equipo! ", Toast.LENGTH_SHORT).show();
+                btnRegistrarMiembro.setEnabled(true);
         }else{
 
             progreso.hide();
+            miembroEquipo.setText("");
+
 
 
             Toast.makeText(this, "Se ingreso un nuevo miembro! ", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void onClickRegistrarJueces(View view) {
+    public void onClickRegistrarEquipo(View view) {
         if (nombreEquipo.getText().toString().isEmpty() || contrasenaEquipo.getText().toString().isEmpty() ||
                 usuarioEquipo.getText().toString().isEmpty()){
 
@@ -181,5 +203,16 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
             RegistrarEquipo();
         }
     }
+    public void onClickRegistrarMiembro(View view) {
+        if(miembroEquipo.getText().toString().isEmpty()){
+            miembroEquipo.setError("VACIO");
+         }else  {
+
+            actividad=2;
+            RegistrarEquipo();
+        }
+
+        }
+
 
 }
