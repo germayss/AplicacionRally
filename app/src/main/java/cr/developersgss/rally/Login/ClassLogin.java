@@ -1,12 +1,6 @@
 package cr.developersgss.rally.Login;
 
-<<<<<<< HEAD
-=======
 import android.app.AlertDialog;
-import android.os.Bundle;
-import android.support.design.widget.TextInputEditText;
-import android.view.View;
->>>>>>> ae709ea3ddba6c29d9dee12179a740bf8a6b158c
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
