@@ -1,6 +1,7 @@
 package cr.developersgss.rally.ModuloRuta;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import cr.developersgss.rally.ModuloAdministrador.ClassMenuPrincipal;
 import cr.developersgss.rally.Objetos.IDRally;
 import cr.developersgss.rally.R;
 
@@ -103,7 +105,7 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
         RegistrarFechaRuta.setText("");
         RegistrarNombreRuta.setText("");
         RegistrarHoraRuta.setText("");
-        Toast.makeText(this, "No se puede conectar " + error.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Verifique los datos:  " + error.toString(), Toast.LENGTH_SHORT).show();
         Log.i("ERROR", error.toString());
     }
 
@@ -158,6 +160,8 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
         }else{
             llenarSpinner=2;
            RegistrarRuta();
+            Intent SiguienteActividad = new Intent(ClassRegistroRuta.this, ClassPuntosDeControlRuta.class);
+            startActivity(SiguienteActividad);
         }
 
 

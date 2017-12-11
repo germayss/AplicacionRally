@@ -13,6 +13,7 @@
         android:layout_marginTop="15dp"
         android:text="Menú Principal"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
 
@@ -32,7 +33,7 @@
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:onClick="onClickRuta"
                 android:text="Ruta"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -40,7 +41,7 @@
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:onClick="onClickPruebas"
                 android:text="Pruebas"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/buttonEquipo"
@@ -49,7 +50,7 @@
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:onClick="onClickEquipos"
                 android:text="Equipos"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/buttonJuez"
@@ -58,7 +59,7 @@
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:onClick="onClickJueces"
                 android:text="Jueces"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/buttonAdmintrador"
@@ -67,7 +68,7 @@
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:onClick="onClickAdministradores"
                 android:text="Administradores"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/button17"

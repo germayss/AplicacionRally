@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".Login.Globales"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,6 +39,7 @@
         <activity android:name=".ModuloRuta.ClassConsultaRuta" />
         <activity android:name=".ModuloRuta.ClassModificarRuta" />
         <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
+        <activity android:name=".ModuloEquipos.ClassRegistroEquipo" />
         <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
         <activity android:name=".ModuloRallyAdministrador.ClassResultadoEquipos" />
         <activity android:name=".ModuloRallyUsuario.ClassCodigoControl" />

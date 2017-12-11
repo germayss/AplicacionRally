@@ -1,5 +1,6 @@
 package cr.developersgss.rally.ModuloJueces;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -55,7 +56,7 @@ public class ClassConsultaJuez extends AppCompatActivity {
 
     private void cargarws(){
 
-        final ProgressDialog progressDialog = new ProgressDialog(this);
+        final ProgressDialog progressDialog = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
         progressDialog.setMessage("Cargando...");
         progressDialog.show();
 

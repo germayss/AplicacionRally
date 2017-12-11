@@ -3,14 +3,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/activity_horizontal_margin"
-    android:paddingVertical="@dimen/activity_horizontal_margin">
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
         android:text="Equipos"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp" />
 
@@ -26,37 +29,29 @@
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="Crear"
-                android:layout_marginTop="@dimen/activity_horizontal_margin" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="Modificar"
-                android:layout_marginTop="@dimen/activity_horizontal_margin" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickRegistrarEquipo"
+                android:text="Registrar"
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickConsultarEquipo"
                 android:text="Consultar"
-                android:layout_marginTop="@dimen/activity_horizontal_margin" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="Eliminar"
-                android:layout_marginTop="@dimen/activity_horizontal_margin" />
+                android:textSize="30sp" />
 
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickRegresarEquipo"
                 android:text="Regresar"
-                android:layout_marginTop="@dimen/activity_horizontal_margin" />
+                android:textSize="30sp" />
         </LinearLayout>
     </ScrollView>
 
