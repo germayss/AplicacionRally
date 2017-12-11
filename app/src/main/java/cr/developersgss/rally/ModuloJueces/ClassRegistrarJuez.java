@@ -19,6 +19,9 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import cr.developersgss.rally.Login.Globales;
 import cr.developersgss.rally.R;
 
@@ -68,18 +71,21 @@ public class ClassRegistrarJuez extends AppCompatActivity implements Response.Li
                 Globales globales = (Globales)getApplication();
                 String idrally=globales.getIDRallyActual();
 
-
+                String nombre = URLEncoder.encode(txtnombre.getText().toString(),"UTF-8");
 
                 String url = "https://aplicacionrallygss.000webhostapp.com/InsertarJuez.php?" +
                         "IDJuez=NULL&IDRally="+idrally+"&IDPuntoControl=1&UsuarioJuez=" + txtusuario.getText().toString() +
-                        "&NombreJuez=" + txtnombre.getText().toString() + "&ContrasenaJuez=" +
+                        "&NombreJuez="+nombre+"&ContrasenaJuez=" +
                         txtcontrasena.getText().toString() + "&Tipo=NULL";
                 jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
                 request.add(jor);
             } catch (Error e) {
 
             }//termina try
-        }
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+             }
 
     }//termina RegistrarJuez
 

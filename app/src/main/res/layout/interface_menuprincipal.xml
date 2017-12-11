@@ -70,25 +70,6 @@
                 android:text="Administradores"
                 android:textSize="24sp" />
 
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:onClick="onClickRallyUsuario"
-                android:text="Rally Usuarios"
-                android:textAlignment="center"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:onClick="onClickRallyJueces"
-                android:text="Rally Jueces"
-                android:textAlignment="center"
-                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

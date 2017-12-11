@@ -24,6 +24,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 import cr.developersgss.rally.Login.Globales;
@@ -81,9 +83,10 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
             progreso.show();
 
             try {
+                String nombrequipo = URLEncoder.encode(nombreEquipo.getText().toString(),"UTF-8");
                 String url = "https://aplicacionrallygss.000webhostapp.com/InsertarEquipo.php?"
                         +"IDRally="+idrally+
-                        "&NombreEquipo="+nombreEquipo.getText().toString()+
+                        "&NombreEquipo="+nombrequipo+
                         "&UsuarioEquipo="+usuarioEquipo.getText().toString()+
                         "&PasswordEquipo="+contrasenaEquipo.getText().toString();
                 jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
@@ -91,6 +94,9 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
             } catch (Error e) {
 
             }//termina try
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
         }else{
 
             try {
@@ -115,18 +121,22 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
                         estadoLider=2;
                     }
                 }
+                String miembro = URLEncoder.encode(miembroEquipo.getText().toString(),"UTF-8");
 
 
                 String url = "https://aplicacionrallygss.000webhostapp.com/InsertarPersonaEquipo.php?"+
                         "IDRally="+idrally.toString()+
                         "&IDEquipo="+idequipo.toString()+
-                        "&NombrePersonaEquipo="+miembroEquipo.getText().toString()+
+                        "&NombrePersonaEquipo="+miembro+
                         "&LiderPersonaEquipo="+estadoLider;
                 jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
                 request.add(jor);
         } catch (Error e) {
 
             }//termina try
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
         }
     }
 

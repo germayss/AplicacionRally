@@ -176,12 +176,32 @@ public class ClassModificarEquipo  extends AppCompatActivity implements Response
             Toast.makeText(this, "Se modifico un equipo! ", Toast.LENGTH_SHORT).show();
         } else if (actividad == 3) {
             progreso.hide();
+            try {
 
-            txtnombre.setText("");
-            txtcontrasena.setText("");
-            txtusuario.setText("");
-            BuscarIDEquipo.setText("");
-            Toast.makeText(this, "Se elimino un equipo! ", Toast.LENGTH_SHORT).show();
+                JSONArray json_array = response.optJSONArray("j");//rally es el identificador del json
+                JSONObject jsonObject = null;
+
+                jsonObject = json_array.getJSONObject(0);
+                String s =jsonObject.optString("IDEquipo");
+               if(s.equals("false"))
+                {
+                    Toast.makeText(this, "Existen miembros! ", Toast.LENGTH_SHORT).show();
+                }else
+                    {
+
+                    txtnombre.setText("");
+                    txtcontrasena.setText("");
+                    txtusuario.setText("");
+                    BuscarIDEquipo.setText("");
+                    Toast.makeText(this, "Se elimino un equipo! ", Toast.LENGTH_SHORT).show();
+                }
+
+            }   catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+
         }
     }
 
