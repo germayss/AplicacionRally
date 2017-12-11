@@ -7,31 +7,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import cr.developersgss.rally.R;
-
 
 public class ClassIniciarRally extends AppCompatActivity implements Response.Listener<JSONObject>,Response.ErrorListener{
 
     ProgressDialog progreso;
     RequestQueue rq;
     JsonObjectRequest jor;
-    private String[][] lc = new String[100][4];
     int contador = 1, contadorPC2 = 0;
-    int contadorPC = 0;
-    int finalpuntoControl = 0;
-    int sec = 99999;
     String idequipo = "", idpuntocontrol = "", idrally = "", idruta = "";
 
     @Override
@@ -48,9 +40,11 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
     }
 
     private void cargarWS(){
+
         rq = Volley.newRequestQueue(this);
         try{
             if (contador == 1){
+                //En cual punto de control esta el equipo
                 progreso=new ProgressDialog(this);
                 progreso.setMessage("Consultando...");
                 progreso.show();
@@ -58,15 +52,18 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
                 jor=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
                 rq.add(jor);
             } else if (contador == 2){
+                //Cual ruta esta activa por un administrador
                 String url="https://aplicacionrallygss.000webhostapp.com/validarsecuenciainicial.php?ID="+idrally;
                 jor=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
                 rq.add(jor);
                 contadorPC2++;
             } else if (contador == 3){
+                //Cual es el primer punto de control en la ruta
                 String url="https://aplicacionrallygss.000webhostapp.com/validarsecuenciainicial2.php?ID="+idruta;
                 jor=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
                 rq.add(jor);
             } else if (contador == 4){
+                //El equipo ya salio del punto de control o sigue en pruebas, segun hora de salida
                 String url="https://aplicacionrallygss.000webhostapp.com/validarsalidapunto.php?IDE="+idequipo+"&IDPC="+idpuntocontrol;
                 jor=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
                 rq.add(jor);
@@ -80,17 +77,20 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
             if (contador == 1){
                 JSONArray array = response.getJSONArray("pcontrol");
                 JSONObject j1= array.getJSONObject(0);
+                //IDpuntoControl 1 default para equipos equipo al inicio del rally
                 if (Integer.parseInt(j1.getString("IDPuntoControl")) == 1){
                     contador = 2;
                     cargarWS();
                 } else {
+                    //Captura IDPuntoControl
                     idpuntocontrol = j1.getString("IDPuntoControl");
-                   contador = 4;
-                   cargarWS();
+                    contador = 4;
+                    cargarWS();
                 }
             } else if(contador == 2){
                 JSONArray array = response.getJSONArray("ruta");
                 JSONObject j2= array.getJSONObject(0);
+                //Captura IDRuta
                 idruta = j2.getString("IDRuta");
                 contador = 3;
                 cargarWS();
@@ -98,16 +98,21 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
                 JSONArray array = response.getJSONArray("pcontrol2");
                 JSONObject j3= array.getJSONObject(0);
                 progreso.hide();
+                //Hacia el punto seguir ruta desde el punto inicial del rally
                 Intent SiguienteActividad = new Intent(ClassIniciarRally.this, ClassSeguirRuta.class);
-                SiguienteActividad.putExtra("ID",j3.getString("IDPuntoControl"));
+                SiguienteActividad.putExtra("IDPC",j3.getString("IDPuntoControl"));
+                SiguienteActividad.putExtra("IDE",idequipo);
                 SiguienteActividad.putExtra("IDR",idrally);
                 startActivity(SiguienteActividad);
             } else if(contador == 4){
                 JSONArray array = response.getJSONArray("hora");
                 JSONObject j4= array.getJSONObject(0);
+                progreso.hide();
+                //Hora 0 error al capturar datos
                 if (j4.getString("HoraSalidaEquipoControl") == "0"){
                     Toast.makeText(this,"Error al optener informacion de ruta",Toast.LENGTH_SHORT).show();
                 } else{
+                    //hora salida null el equipo continua realizando pruebas, sin hora de salida
                     if (j4.getString("HoraSalidaEquipoControl") == "null" ) {
                         Intent SiguienteActividad = new Intent(ClassIniciarRally.this, ClassIniciarPruebas.class);
                         SiguienteActividad.putExtra("IDPC",idpuntocontrol);
@@ -115,6 +120,7 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
                         SiguienteActividad.putExtra("IDR",idrally);
                         startActivity(SiguienteActividad);
                     } else {
+                        //Hora salida existe, ya termino prueba y va a seguir ruta al siguiente punto control
                         Intent SiguienteActividad = new Intent(ClassIniciarRally.this, ClassSeguirRuta.class);
                         SiguienteActividad.putExtra("IDPC",idpuntocontrol);
                         SiguienteActividad.putExtra("IDE",idequipo);

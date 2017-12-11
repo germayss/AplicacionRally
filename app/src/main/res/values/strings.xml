@@ -30,11 +30,11 @@
 
     <string name="Llegada_a_punto_de_control">Llegada a punto de control</string>
     <string name="Ruta_actual">Ruta actual</string>
-    <string name="Etapa">Etapa #11 XXXXXXXXX</string>
-    <string name="Trivia">Trivia XXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+    <string name="Etapa"></string>
+    <string name="Trivia"></string>
     <string name="Puntos_extra">Puntos extra</string>
     <string name="Prueba">Prueba</string>
-    <string name="EnunciadoPrueba">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+    <string name="EnunciadoPrueba"></string>
     <string name="C_digo_dl_punto_de_control">Código del punto de control</string>
     <string name="ActualizarCodigo">Actualizar</string>
     <string name="Lista_de_puntos_extra">Lista de puntos extra</string>
