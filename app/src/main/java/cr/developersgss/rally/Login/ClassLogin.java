@@ -1,14 +1,14 @@
 package cr.developersgss.rally.Login;
 
 import android.app.AlertDialog;
-import android.os.Bundle;
-import android.support.design.widget.TextInputEditText;
-import android.view.View;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -16,17 +16,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 
 import cr.developersgss.rally.ModuloAdministrador.ClassMenuPrincipal;
 import cr.developersgss.rally.ModuloRallyJuez.ClassPuntodeControl;
 import cr.developersgss.rally.ModuloRallyUsuario.ClassIniciarRally;
 import cr.developersgss.rally.R;
-
-import static com.android.volley.toolbox.Volley.newRequestQueue;
 
 public class ClassLogin extends AppCompatActivity implements Response.Listener<JSONObject>,Response.ErrorListener{
 
@@ -84,6 +82,8 @@ public class ClassLogin extends AppCompatActivity implements Response.Listener<J
 
             if (Integer.parseInt(jsonObject.getString("Tipo")) == 3){
                 Intent SiguienteActividad = new Intent(ClassLogin.this, ClassIniciarRally.class);
+                SiguienteActividad.putExtra("ID",jsonObject.getString("IDEquipo"));
+                SiguienteActividad.putExtra("IDR",jsonObject.getString("IDRally"));
                 startActivity(SiguienteActividad);
             } else if (Integer.parseInt(jsonObject.getString("Tipo")) == 2){
                 Intent SiguienteActividad = new Intent(ClassLogin.this, ClassPuntodeControl.class);
