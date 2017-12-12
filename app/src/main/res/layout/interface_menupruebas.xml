@@ -29,35 +29,40 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:onClick="onClickRegistrar"
-                android:text="Registrar" />
+                android:text="Registrar"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnConsultar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:text="Consultar" />
+                android:text="Consultar"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnModificar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:text="Modificar" />
+                android:text="Modificar"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnEliminar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:text="Eliminar" />
+                android:text="Eliminar"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnAsignar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:text="Asignar" />
+                android:text="Asignar"
+                android:textSize="24sp" />
         </LinearLayout>
     </ScrollView>
 

@@ -188,11 +188,12 @@ public class ClassModificarEquipo  extends AppCompatActivity implements Response
                 JSONObject jsonObject = null;
 
                 jsonObject = json_array.getJSONObject(0);
-                String s =jsonObject.optString("IDEquipo");
-               if(s.equals("false"))
+                int s =jsonObject.optInt("IDEquipo");
+               if(s==0)
                 {
                     Toast.makeText(this, "Existen miembros! ", Toast.LENGTH_SHORT).show();
-                }else
+                }
+                else
                     {
 
                     txtnombre.setText("");

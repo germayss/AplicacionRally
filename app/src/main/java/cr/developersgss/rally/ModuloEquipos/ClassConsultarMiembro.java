@@ -85,12 +85,12 @@ public class ClassConsultarMiembro extends AppCompatActivity {
                         adap.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-
+/*
                                 String temp=listamiembros.get(recyclerView.getChildAdapterPosition(view)).getIDPersonaEquipo();
 
                                 Intent intent = new Intent(ClassConsultarMiembro.this, ClassModificarMiembro.class);
                                 intent.putExtra("ID",temp);
-                                startActivity(intent);
+                                startActivity(intent);*/
                             }
                         });
                         recyclerView.setAdapter(adap);

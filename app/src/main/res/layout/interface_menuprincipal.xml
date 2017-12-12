@@ -70,6 +70,15 @@
                 android:text="Administradores"
                 android:textSize="24sp" />
 
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickSalirAdmi"
+                android:text="Salir"
+                android:textSize="24sp" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

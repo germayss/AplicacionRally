@@ -54,7 +54,13 @@ public class AdaptadorMiembro extends RecyclerView.Adapter<AdaptadorMiembro.View
         holder.IDEquipo.setText(lista.getIDEquipo());
         holder.IDRally.setText(lista.getIDRally());
         holder.Nombre.setText(lista.getNombrePersonaEquipo());
-        holder.lider.setText(lista.getLider());
+        if (lista.getLider().equals("1")){
+            //holder.lider.setText(lista.getLider());
+            holder.lider.setText("Sí");
+        }else {
+            holder.lider.setText("No");
+        }
+
     }
 
     @Override

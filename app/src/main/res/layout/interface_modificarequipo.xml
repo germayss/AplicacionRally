@@ -106,13 +106,21 @@
                     android:onClick="onClickEliminarEquipo"
                     android:text="Eliminar" />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <Button
                     android:id="@+id/button10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickConsultarMiembro"
-                    android:text="Ver Miembros" />
+                    android:text="Ver Miembros"
+                    android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

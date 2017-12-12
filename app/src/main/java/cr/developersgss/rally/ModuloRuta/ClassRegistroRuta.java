@@ -24,8 +24,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
+import cr.developersgss.rally.Login.Globales;
 import cr.developersgss.rally.ModuloAdministrador.ClassMenuPrincipal;
 import cr.developersgss.rally.Objetos.IDRally;
 import cr.developersgss.rally.R;
@@ -38,12 +41,11 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
 
     RequestQueue request;
     JsonObjectRequest jor;
-    Spinner SpinnerRally;
     ArrayList lista_rallys;
     TextInputEditText RegistrarNombreRuta,RegistrarFechaRuta,RegistrarHoraRuta;
     Button BtnRegistrarRuta;
     ProgressDialog progreso;//ventana de progreso
-    int llenarSpinner=1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,26 +57,16 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
         RegistrarHoraRuta = (TextInputEditText) findViewById(R.id.RegistrarHoraRuta);
         BtnRegistrarRuta= (Button) findViewById(R.id.BtnRegistrarRuta);
         lista_rallys= new ArrayList<>();
-        SpinnerRally= findViewById(R.id.SpinnerRally);
 
-        RegistrarRuta();
+
+
 
     }
 
     private void RegistrarRuta() {
 
-       if (llenarSpinner==1) {//carga el spinner del idrally
-           request = Volley.newRequestQueue(this);
-
-           try {
-               String url = "https://aplicacionrallygss.000webhostapp.com/SelectIDRally.php";
-               jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
-               request.add(jor);
-           } catch (Error e) {
-
-           }//termina try
-
-       }else{
+        Globales globales = (Globales)getApplication();
+        String idrally=globales.getIDRallyActual();
 
            request = Volley.newRequestQueue(this);
            progreso = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
@@ -84,11 +76,11 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
            try {
 
 
-               String SeleRally=SpinnerRally.getSelectedItem().toString();
+               String nombreruta = URLEncoder.encode(RegistrarNombreRuta.getText().toString(),"UTF-8");
 
                String url = "https://aplicacionrallygss.000webhostapp.com/InsertarRuta.php?"+
-                       "IDRally="+SeleRally+
-                       "&NombreRuta="+RegistrarNombreRuta.getText().toString()+
+                       "IDRally="+idrally+
+                       "&NombreRuta="+nombreruta+
                        "&FechaInicioRuta="+RegistrarFechaRuta.getText().toString()+
                        "&HoraInicioRuta="+RegistrarHoraRuta.getText().toString();
                jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
@@ -96,9 +88,12 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
            } catch (Error e) {
 
            }//termina try
+           catch (UnsupportedEncodingException e) {
+               e.printStackTrace();
+           }
 
-       }
     }
+
 
     @Override
     public void onErrorResponse(VolleyError error) {
@@ -113,37 +108,16 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
     @Override
     public void onResponse(JSONObject response) {
 
-        if (llenarSpinner == 1) {// si el ws da respuesta carga el spinner
-
-            IDRally idrally = null;
-            JSONArray json_array = response.optJSONArray("rally");//rally es el identificador del json
-            try {
-
-                for (int i = 0; i < json_array.length(); i++) {
-                    idrally = new IDRally();
-                    JSONObject jsonObject = null;
-                    jsonObject = json_array.getJSONObject(i);
-                    idrally.setID(jsonObject.optInt("IDRally"));
-                    lista_rallys.add(idrally.getID());
-
-                }
-                ArrayAdapter<IDRally> ids = new ArrayAdapter<IDRally>(this, android.R.layout.simple_list_item_1, lista_rallys);
-                SpinnerRally.setAdapter(ids);
 
 
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }else{
-            {  // limpa los botones y msj
                 progreso.hide();
                 RegistrarFechaRuta.setText("");
                 RegistrarNombreRuta.setText("");
                 RegistrarHoraRuta.setText("");
                 Toast.makeText(this, "Se ingreso una nueva ruta ", Toast.LENGTH_SHORT).show();
 
-            }
-        }
+
+
     }
     public void onClickRegistrarRuta(View view) {
 
@@ -159,10 +133,9 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
 
             }
         }else{
-            llenarSpinner=2;
            RegistrarRuta();
-            Intent SiguienteActividad = new Intent(ClassRegistroRuta.this, ClassPuntosDeControlRuta.class);
-            startActivity(SiguienteActividad);
+           // Intent SiguienteActividad = new Intent(ClassRegistroRuta.this, ClassPuntosDeControlRuta.class);
+           // startActivity(SiguienteActividad);
         }
 
 
