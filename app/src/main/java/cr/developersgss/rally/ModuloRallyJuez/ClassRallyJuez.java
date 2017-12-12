@@ -23,4 +23,8 @@ public class ClassRallyJuez extends AppCompatActivity {
         Intent SiguienteActividad = new Intent(ClassRallyJuez.this, ClassJuezAsignaPrueba.class);
         startActivity(SiguienteActividad);
     }
+    public void onClickRegresarJuez1(View view) {
+        Intent SiguienteActividad = new Intent(ClassRallyJuez.this, Class_equipoenPuntoJuez.class);
+        startActivity(SiguienteActividad);
+    }
 }

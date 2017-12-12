@@ -76,6 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:color/transparent"
                 android:onClick="onClickContraseña"
                 android:text="@string/Cambio_d_contrase_a"
                 android:textSize="18sp" />

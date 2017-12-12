@@ -1,5 +1,6 @@
 package cr.developersgss.rally.ModuloRallyUsuario;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import cr.developersgss.rally.Login.ClassLogin;
 import cr.developersgss.rally.R;
 
 public class ClassIniciarRally extends AppCompatActivity implements Response.Listener<JSONObject>,Response.ErrorListener{
@@ -30,13 +33,20 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_class_iniciar_rally);
+
         Bundle bundle = getIntent().getExtras();
         idequipo = bundle.getString("ID");
-        idrally = bundle.getString("IDR");
+       idrally = bundle.getString("IDR");
+
     }
 
     public void onClickIniciarRally(View view) {
         cargarWS();
+    }
+    public void onClickSalirRally(View view) {
+
+        Intent SiguienteActividad = new Intent(ClassIniciarRally.this, ClassLogin.class);
+        startActivity(SiguienteActividad);
     }
 
     private void cargarWS(){
@@ -45,7 +55,7 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
         try{
             if (contador == 1){
                 //En cual punto de control esta el equipo
-                progreso=new ProgressDialog(this);
+                progreso=new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
                 progreso.setMessage("Consultando...");
                 progreso.show();
                 String url="https://aplicacionrallygss.000webhostapp.com/validarpuntocontrol.php?ID="+idequipo;
@@ -110,7 +120,7 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
                 progreso.hide();
                 //Hora 0 error al capturar datos
                 if (j4.getString("HoraSalidaEquipoControl") == "0"){
-                    Toast.makeText(this,"Error al optener informacion de ruta",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,"Error al obtener informacion de ruta",Toast.LENGTH_SHORT).show();
                 } else{
                     //hora salida null el equipo continua realizando pruebas, sin hora de salida
                     if (j4.getString("HoraSalidaEquipoControl") == "null" ) {

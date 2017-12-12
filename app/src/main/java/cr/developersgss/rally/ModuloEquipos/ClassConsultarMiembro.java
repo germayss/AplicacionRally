@@ -25,41 +25,42 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import cr.developersgss.rally.Objetos.TablaEquipos;
-
+import cr.developersgss.rally.Objetos.TablaPersonaEquipo;
 import cr.developersgss.rally.R;
 
 /**
- * Created by germa on 24/11/2017.
+ * Created by Krlos on 11/12/2017.
  */
 
-public class ClassConsultarEquipo extends AppCompatActivity {
+public class ClassConsultarMiembro extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adap;
-    private List<TablaEquipos> listaequipos;
+    private List<TablaPersonaEquipo> listamiembros;
+    String idintent;
 
-    private static final  String URL="https://aplicacionrallygss.000webhostapp.com/ConsultarEquipo.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.interface_consultaequipo);
+        setContentView(R.layout.interface_consultarmiembro);
 
-        recyclerView= findViewById(R.id.recyclerViewE);
+        recyclerView= findViewById(R.id.recyclerViewM);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        listaequipos= new ArrayList<>();
+        listamiembros= new ArrayList<>();
 
-
+        idintent = getIntent().getStringExtra("ID2");
         cargarws();
 
     }
-    private void cargarws() {
+    private void cargarws(){
         final ProgressDialog progressDialog = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
         progressDialog.setMessage("Cargando...");
         progressDialog.show();
+
+      String URL="https://aplicacionrallygss.000webhostapp.com/ConsultarPersonaEquipo.php?IDEquipo="+idintent.toString();
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
             @Override
@@ -71,23 +72,23 @@ public class ClassConsultarEquipo extends AppCompatActivity {
                     JSONArray array= jsonObject.getJSONArray("equipos");
                     for (int i=0; i<array.length(); i++){
                         JSONObject o= array.getJSONObject(i);
-                        TablaEquipos item= new TablaEquipos(
+                        TablaPersonaEquipo item= new TablaPersonaEquipo(
+                                o.getString("IDPersonaEquipo"),
                                 o.getString("IDRally"),
                                 o.getString("IDEquipo"),
-                                o.getString("NombreEquipo"),
-                                o.getString("UsuarioEquipo"),
-                                o.getString("PasswordEquipo")
+                                o.getString("NombrePersonaEquipo"),
+                                o.getString("LiderPersonaEquipo")
                         );
 
-                        listaequipos.add(item);
-                        AdaptadorEquipo adap =new AdaptadorEquipo(listaequipos,getApplicationContext());
+                        listamiembros.add(item);
+                        AdaptadorMiembro adap =new AdaptadorMiembro(listamiembros,getApplicationContext());
                         adap.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
 
-                                String temp=listaequipos.get(recyclerView.getChildAdapterPosition(view)).getIDEquipo();
+                                String temp=listamiembros.get(recyclerView.getChildAdapterPosition(view)).getIDPersonaEquipo();
 
-                                Intent intent = new Intent(ClassConsultarEquipo.this, ClassModificarEquipo.class);
+                                Intent intent = new Intent(ClassConsultarMiembro.this, ClassModificarMiembro.class);
                                 intent.putExtra("ID",temp);
                                 startActivity(intent);
                             }
@@ -111,7 +112,5 @@ public class ClassConsultarEquipo extends AppCompatActivity {
         );
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
-
     }
-
-    }
+}

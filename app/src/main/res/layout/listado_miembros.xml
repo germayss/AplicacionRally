@@ -23,14 +23,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/LIDEquipo1"
+                    android:id="@+id/LIDMiembro1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="IDEquipo: "
+                    android:text="IDMiembro: "
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
                 <TextView
-                    android:id="@+id/LIDEquipo"
+                    android:id="@+id/LIDMiembro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView"
@@ -50,7 +50,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/LIDRallyE"
+                    android:id="@+id/LIDRallyM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView" />
@@ -63,14 +63,14 @@
 
                 <TextView
 
-                    android:id="@+id/LIDNombre1"
+                    android:id="@+id/LIDEquipo1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nombre: "
+                    android:text="IDEquipo:"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/LIDNombreE"
+                    android:id="@+id/LIDEquipoM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView" />
@@ -81,14 +81,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/LUsuario1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Usuario: "
+                    android:id="@+id/LNombre1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Nombre:"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/LUsuarioE"
+                    android:id="@+id/LNombreM"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="TextView" />
@@ -99,17 +99,17 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/LContrasena1"
+                    android:id="@+id/LLider1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Contraseña: "
+                    android:text="Lider:"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/LContrasenaE"
+                    android:id="@+id/LLider"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="text" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"

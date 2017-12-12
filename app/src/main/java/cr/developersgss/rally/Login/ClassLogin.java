@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -41,7 +42,21 @@ public class ClassLogin extends AppCompatActivity implements Response.Listener<J
         txtusuario = findViewById(R.id.txtLoginUsuario);
         txtpass = findViewById(R.id.txtLoginPass);
     }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode== KeyEvent.KEYCODE_BACK)
+            if (txtusuario.getText().toString().isEmpty()){
+                txtusuario.setError("VACIO");
+            }
+            if (txtpass.getText().toString().isEmpty()){
+                txtpass.setError("VACIO");
+            }
 
+
+
+        return false;
+        // Disable back button
+    }
     //Conexion con el web services y obtencion de datos
     private void cargarWS(){
         rq = Volley.newRequestQueue(this);

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import java.util.List;
 import cr.developersgss.rally.Objetos.TablaEquipos;
@@ -20,6 +21,7 @@ public class AdaptadorEquipo extends RecyclerView.Adapter<AdaptadorEquipo.ViewHo
     private List<TablaEquipos> listaequipos;
     private Context context;
     private  View.OnClickListener listener;
+
 
     public AdaptadorEquipo(List<TablaEquipos> listaequipos, Context context) {
         this.listaequipos = listaequipos;
@@ -46,6 +48,8 @@ public class AdaptadorEquipo extends RecyclerView.Adapter<AdaptadorEquipo.ViewHo
         holder.Nombre.setText(lista.getNombreEquipo());
         holder.Usuario.setText(lista.getUsuarioquipo());
         holder.Contraseña.setText(lista.getPasswordEquipo());
+
+
     }
 
     @Override
@@ -66,6 +70,7 @@ public class AdaptadorEquipo extends RecyclerView.Adapter<AdaptadorEquipo.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView IDRally,IDEquipo,Nombre,Usuario,Contraseña;
+        Button btmiembro;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -75,6 +80,7 @@ public class AdaptadorEquipo extends RecyclerView.Adapter<AdaptadorEquipo.ViewHo
             Nombre= itemView.findViewById(R.id.LIDNombreE);
             Usuario= itemView.findViewById(R.id.LUsuarioE);
             Contraseña= itemView.findViewById(R.id.LContrasenaE);
+
         }
     }
 }

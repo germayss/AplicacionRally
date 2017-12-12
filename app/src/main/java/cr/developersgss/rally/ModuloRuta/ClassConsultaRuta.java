@@ -1,5 +1,6 @@
 package cr.developersgss.rally.ModuloRuta;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,7 +51,7 @@ public class ClassConsultaRuta extends AppCompatActivity {
     }
     private void cargarws(){
 
-        final ProgressDialog progressDialog = new ProgressDialog(this);
+        final ProgressDialog progressDialog = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
         progressDialog.setMessage("Cargando...");
         progressDialog.show();
 

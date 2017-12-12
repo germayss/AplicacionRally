@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import cr.developersgss.rally.Login.ClassLogin;
+import cr.developersgss.rally.ModuloRallyUsuario.ClassIniciarRally;
 import cr.developersgss.rally.R;
 
 /**
@@ -21,6 +23,11 @@ public class ClassPuntodeControl extends AppCompatActivity {
 
     public void onClickPuntoControl(View view) {
         Intent SiguienteActividad = new Intent(ClassPuntodeControl.this, Class_equipoenPuntoJuez.class);
+        startActivity(SiguienteActividad);
+    }
+    public void onClickSalirJuez(View view) {
+
+        Intent SiguienteActividad = new Intent(ClassPuntodeControl.this, ClassLogin.class);
         startActivity(SiguienteActividad);
     }
 }

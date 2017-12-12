@@ -39,9 +39,11 @@
         <activity android:name=".ModuloRuta.ClassConsultaRuta" />
         <activity android:name=".ModuloRuta.ClassModificarRuta" />
         <activity android:name=".ModuloEquipos.ClassMenuEquipos" />
+        <activity android:name=".ModuloRallyUsuario.ClassIniciarRally" />
         <activity android:name=".ModuloEquipos.ClassRegistroEquipo" />
         <activity android:name=".ModuloEquipos.ClassConsultarEquipo" />
         <activity android:name=".ModuloEquipos.ClassModificarEquipo" />
+        <activity android:name=".ModuloEquipos.ClassConsultarMiembro" />
         <activity android:name=".ModuloAdministrador.ClassMenuAdministradores" />
         <activity android:name=".ModuloRallyAdministrador.ClassResultadoEquipos" />
         <activity android:name=".ModuloRallyUsuario.ClassCodigoControl" />

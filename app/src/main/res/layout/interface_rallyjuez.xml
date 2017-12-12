@@ -1,42 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnConfirmallegada2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Confirmar llegada" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnAsignarPrueba"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Asignar Prueba"
-        android:onClick="onClickAsignaPrueba" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btnConfirmaSalida2"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Confirmar Salida" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menú"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/btnMuestraEquipos2"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Ver Equipos" />
+            <Button
+                android:id="@+id/btnConfirmallegada2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="Confirmar llegada"
+                android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/btnRegresar"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:text="Regresar" />
+            <Button
+                android:id="@+id/btnAsignarPrueba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:onClick="onClickAsignaPrueba"
+                android:text="Asignar Prueba"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnConfirmaSalida2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="Confirmar Salida"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnMuestraEquipos2"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="Ver Equipos"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="onClickRegresarJuez1"
+                android:text="Regresar"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

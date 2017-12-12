@@ -22,6 +22,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import cr.developersgss.rally.ModuloJueces.ClassMenuJueces;
 import cr.developersgss.rally.ModuloJueces.ClassModificarJuez;
 import cr.developersgss.rally.Objetos.TablaJuez;
@@ -88,12 +91,12 @@ public class ClassModificarEquipo  extends AppCompatActivity implements Response
 
             try {
 
-
+                String nombreE= URLEncoder.encode(txtnombre.getText().toString(),"UTF-8");
 
                 String url = "https://aplicacionrallygss.000webhostapp.com/ModificarEquipo.php?"+
                         "IDEquipo="+BuscarIDEquipo.getText().toString()+
                         "&UsuarioEquipo="+txtusuario.getText().toString()+
-                        "&NombreEquipo="+txtnombre.getText().toString()+
+                        "&NombreEquipo="+nombreE+
                         "&PasswordEquipo="+txtcontrasena.getText().toString();
 
                 jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
@@ -101,6 +104,9 @@ public class ClassModificarEquipo  extends AppCompatActivity implements Response
             } catch (Error e) {
 
             }//termina try
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
 
         }else if (actividad==3){
 
@@ -243,5 +249,14 @@ public class ClassModificarEquipo  extends AppCompatActivity implements Response
             startActivity(SiguienteActividad);
 
         }
+    }
+    public void onClickConsultarMiembro(View view) {
+
+            String temp= BuscarIDEquipo.getText().toString();
+
+        Intent intent = new Intent(ClassModificarEquipo.this, ClassConsultarMiembro.class);
+        intent.putExtra("ID2",temp);
+        startActivity(intent);
+
     }
 }

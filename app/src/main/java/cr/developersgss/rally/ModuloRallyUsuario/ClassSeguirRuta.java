@@ -1,5 +1,6 @@
 package cr.developersgss.rally.ModuloRallyUsuario;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -44,7 +45,7 @@ public class ClassSeguirRuta extends AppCompatActivity implements Response.Liste
     }
 
     private  void  cargar(){
-        progreso=new ProgressDialog(this);
+        progreso=new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
         progreso.setMessage("Consultando...");
         progreso.show();
         String url="https://aplicacionrallygss.000webhostapp.com/datospuntocontrol.php?IDPC="+idpuntocontrol;

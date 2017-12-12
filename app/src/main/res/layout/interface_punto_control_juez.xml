@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
@@ -51,19 +53,20 @@
                 android:layout_marginTop="15dp"
                 android:onClick="onClickPuntoControl"
                 android:text="Aceptar"
+                android:textSize="18sp"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="137dp"
                 tools:layout_editor_absoluteY="248dp" />
 
             <Button
-                android:id="@+id/btnRegresar"
+                android:id="@+id/button17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Regresar"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="137dp"
-                tools:layout_editor_absoluteY="372dp" />
+                android:onClick="onClickSalirJuez"
+                android:text="Salir"
+                android:textSize="18sp" />
+
         </LinearLayout>
     </ScrollView>
 

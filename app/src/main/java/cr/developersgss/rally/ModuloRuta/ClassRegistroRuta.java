@@ -1,5 +1,6 @@
 package cr.developersgss.rally.ModuloRuta;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -76,7 +77,7 @@ public class ClassRegistroRuta extends AppCompatActivity implements Response.Lis
        }else{
 
            request = Volley.newRequestQueue(this);
-           progreso = new ProgressDialog(this);
+           progreso = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
            progreso.setMessage("Registrando...");
            progreso.show();
 

@@ -1,5 +1,6 @@
 package cr.developersgss.rally.ModuloEquipos;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
@@ -78,7 +79,7 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
 
             AsignoLider=false;
             request = Volley.newRequestQueue(this);
-            progreso = new ProgressDialog(this);
+            progreso = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
             progreso.setMessage("Registrando...");
             progreso.show();
 
@@ -103,7 +104,7 @@ public class ClassRegistroEquipo extends AppCompatActivity implements Response.L
 
                int estadoLider;
                 request = Volley.newRequestQueue(this);
-                progreso = new ProgressDialog(this);
+                progreso = new ProgressDialog(this, AlertDialog.THEME_HOLO_DARK);
                 progreso.setMessage("Registrando...");
                 progreso.show();
 

@@ -23,6 +23,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import cr.developersgss.rally.Objetos.TablaJuez;
 import cr.developersgss.rally.R;
 
@@ -89,12 +92,12 @@ public class ClassModificarJuez extends AppCompatActivity implements Response.Li
 
             try {
 
-
+                String nombre = URLEncoder.encode(txtnombre.getText().toString(),"UTF-8");
 
                 String url = "https://aplicacionrallygss.000webhostapp.com/ModificarJuez.php?"+
                         "IDJuez="+BuscarIDJuez.getText().toString()+
                         "&UsuarioJuez=" + txtusuario.getText().toString()+
-                        "&NombreJuez=" + txtnombre.getText().toString()+
+                        "&NombreJuez=" + nombre+
                         "&ContrasenaJuez=" + txtcontrasena.getText().toString();
 
                 jor = new JsonObjectRequest(Request.Method.GET, url, null, this, this);//conecta con el url
@@ -102,8 +105,11 @@ public class ClassModificarJuez extends AppCompatActivity implements Response.Li
             } catch (Error e) {
 
             }//termina try
+            catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
 
-        }else if (actividad==3){
+         }else if (actividad==3){
 
 
             request = Volley.newRequestQueue(this);
