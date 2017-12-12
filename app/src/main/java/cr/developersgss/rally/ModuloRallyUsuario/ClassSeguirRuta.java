@@ -56,11 +56,15 @@ public class ClassSeguirRuta extends AppCompatActivity implements Response.Liste
 
     public void onClickLlgada(View view) {
         Intent SiguienteActividad = new Intent(ClassSeguirRuta.this, ClassIniciarPruebas.class);
+        SiguienteActividad.putExtra("IDE",idequipo);
+        SiguienteActividad.putExtra("IDR",idrally);
         startActivity(SiguienteActividad);
     }
 
     public void onClickPuntosExtra(View view) {
         Intent SiguienteActividad = new Intent(ClassSeguirRuta.this, ClassPuntosExtra.class);
+        SiguienteActividad.putExtra("IDE",idequipo);
+        SiguienteActividad.putExtra("IDR",idrally);
         startActivity(SiguienteActividad);
     }
 
