@@ -95,7 +95,7 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
                 contador = 3;
                 cargarWS();
             } else if(contador == 3){
-                JSONArray array = response.getJSONArray("pcontrol2");
+                JSONArray array = response.getJSONArray("ruta");
                 JSONObject j3= array.getJSONObject(0);
                 progreso.hide();
                 //Hacia el punto seguir ruta desde el punto inicial del rally
@@ -129,7 +129,9 @@ public class ClassIniciarRally extends AppCompatActivity implements Response.Lis
                     }
                 }
             }
-        }catch (JSONException e){}
+        }catch (JSONException e){
+            Toast.makeText(this,"Error al obtener datos de ruta del equipo",Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
